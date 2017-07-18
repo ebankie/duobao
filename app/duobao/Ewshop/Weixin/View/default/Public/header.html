@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>{$meta_title} - {:C('WEB_SITE_TITLE')}</title>
+    <link rel="stylesheet" href="__CSS__/swiper.min.css">
+    <link rel="stylesheet" href="__CSS__/styles.css" />
+    <link rel="stylesheet" href="__CSS__/index.css" />
+    <script type="text/javascript" src="__JS__/swiper.min.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="__JS__/index.js"></script>
+    <script>
+        M.load(function () {
+            var swiper = new Swiper('.swiper-container' , {
+                pagination : '.swiper-pagination' , paginationClickable : true , autoplay : 5000 ,
+            });
+            menu();
+        })
+    </script>
+    <style type="text/css">
+        .swiper-pagination-bullet{
+            background : #FFF;
+            opacity    : 1;
+        }
+
+        .swiper-pagination-bullet-active{
+            opacity    : 1;
+            background : #DF4B4B;
+        }
+    </style>
+</head>
+<body>
+<!--侧边栏-->
+<article id="article">
+    <div id="user" class="pd_20">
+        <div class="userImg">
+            <img src="__IMG__/a/user/1.png" />
+        </div>
+        <div id="userName" class="">
+            {$_SESSION['onethink_home']['user_auth']['username']}
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin'">
+        <div class="funs_left">
+            <img src="__IMG__/home.png" />
+        </div>
+        <div class="funs_text mr_l_20">首页</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin/my'">
+        <div class="funs_left">
+            <img src="__IMG__/me.png" />
+        </div>
+        <div class="funs_text mr_l_20">个人中心</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin/orders'">
+        <div class="funs_left">
+            <img src="__IMG__/buy.png" />
+        </div>
+        <div class="funs_text mr_l_20">拍卖订单</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin/explain'">
+        <div class="funs_left">
+            <img src="__IMG__/act_info.png" />
+        </div>
+        <div class="funs_text mr_l_20">活动说明</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin/goods'">
+        <div class="funs_left">
+            <img src="__IMG__/news_lists.png" />
+        </div>
+        <div class="funs_text mr_l_20">拍品列表</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+    <div class="funs pd_l_20" onclick="location.href = '/Weixin/news'">
+        <div class="funs_left">
+            <img src="__IMG__/sounds.png" />
+        </div>
+        <div class="funs_text mr_l_20">动态资讯</div>
+        <div class="funs_r">
+            <img src="__IMG__/ringht.png" />
+        </div>
+    </div>
+</article>

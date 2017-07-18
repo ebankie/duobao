@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买记录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/buyrecord.css">
+</head>
+<body>
+<div class="mainall">
+	<div class="foot">
+        <p>当日参与：{$order_num}单   </p>
+        <p>当日获奖：{$order_success_num}单 </p>
+        <p>当日未获奖：{$order_fail_num}单</p>
+    </div>
+    <ul class="buylis">
+        <volist name="list" id="vo">
+            <li>
+                <div class="li1">
+                    <div class="li-img"><img src="{$vo.goods_detail.cover_id|get_cover='path'}" alt=""></div>
+                    <!--<div class="li-p1">半价购买 : ¥ <span class="red">{$vo.goods_type}</span> </div>-->
+                    <if condition="$vo['order_type'] eq 1">
+                        <div class="li-p2">待开奖</div>
+                    <elseif condition="$vo['order_type'] eq 2" />
+                        <!--<div class="li-p3">恭喜获胜</div>-->
+                        <div class="li-p2"><a href="{:U('My/exchangeList')}" style="color: #db4252;">获胜领奖</a></div>
+                    <elseif condition="$vo['order_type'] eq 3" />
+                        <div class="li-p2 li-p4">未中奖</div>
+                    <elseif condition="$vo['order_type'] eq 4" />
+                        <div class="li-p2"><a style="color: #db4252;">已兑奖</a></div>
+                    </if>
+                </div>
+                <div class="li2">
+                    <p class="li-tit">{$vo.goods_detail.title}</p>
+                    <!--<p class="">本期期数： <span class="red">{$vo.period}</span></p>-->
+                    <p>我的选择：<span class="red">{$vo.num}单 {$vo.type}</span></p>
+                    <p>参与时间：{$vo.create_time|date='Y/m/d H:i:s', ###}</p>
+                    <p>开奖时间：{$vo.lottery_time}</p>
+                </div>
+                <div class="qx"><a href="/Weixin/My/orderDetail/id/{$vo.id}" style="color: #5d6b7d;">查看详情</a></div>
+            </li>
+        </volist>
+    </ul>
+    
+</div>
+
+	<include file="Public/footer3" />
+<script type="text/javascript"></script>
+</body>
+</html>

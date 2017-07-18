@@ -1,0 +1,25 @@
+<include file="Public/header_common" />
+<body>
+<header class="header box">
+    <div class="box_icon_left" id="menuButon" onclick="history.back();">
+        <img class="box_icon_left_img" src="__IMG__/left.png" />
+    </div>
+    <div class="box_title">动态资讯</div>
+    <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+        <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png" />
+    </div>
+</header>
+<volist name="data.articleList" id="vo">
+    <div class="trandeBox pd_20">
+        <div class="trandeBox_img">
+            <a href="{:U('Weixin/news/'.$vo['id'])}"><img src="{$vo.path}" /></a>
+        </div>
+        <div class="trandeBox_text mr_l_20">
+            <a href="{:U('Weixin/news/'.$vo['id'])}"><p>{$vo.title}</p></a>
+            <div>{$vo.shortnote}</div>
+            <div class="trandeBox_time">{$vo.create_time|date='Y-m-d',###}</div>
+        </div>
+    </div>
+</volist>
+</body>
+</html>

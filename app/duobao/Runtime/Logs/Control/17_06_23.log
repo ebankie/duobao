@@ -1,0 +1,1936 @@
+[ 2017-06-23T03:23:29+08:00 ] 111.206.36.144 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003383s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2017-06-23T03:40:04+08:00 ] 180.97.35.89 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2017-06-23T10:32:05+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000200s ]
+
+[ 2017-06-23T10:32:24+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'linjunying1' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498185144',`last_login_ip`='2059958277' WHERE `uid` = 33 [ RunTime:0.0002s ]
+
+[ 2017-06-23T10:32:24+08:00 ] 122.200.120.5 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='33' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` IN ('1','2') AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0008s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 2 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0008s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0013s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014722s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002766s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.014316s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020653s ]
+SQL: select version() as v; [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004451s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006382s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.006382s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023956s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000558s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008391s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001964s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.022767s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000756s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008052s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.008587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000232s ]
+
+[ 2017-06-23T10:34:56+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Bidding/index%' ) LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 321 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 321  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 321 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='33' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '订单管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '兑换管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '开奖码管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '充值管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000211s ]
+
+[ 2017-06-23T11:11:39+08:00 ] 122.200.120.6 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002887s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2017-06-23T11:11:50+08:00 ] 122.200.120.6 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'baiyu' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498187510',`last_login_ip`='2059958278' WHERE `uid` = 27 [ RunTime:0.0004s ]
+
+[ 2017-06-23T11:11:50+08:00 ] 122.200.120.6 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0011s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='27' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','16','17','18','19','20','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','79','80','81','87','88','89','90','91','92','93','94','98','100','101','102','103','104','105','107','108','109','110','111','112','113','114','117','121','122','123','124','125','126','127','128','130','133','136','137','138','139','141','145','146','148','149','150','151','154','157','158','159','161','164','165','166','167','171','173','182','197','198','199','200','201','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','234','237','238','239','240','241','242','243','244','256','269','270','271','274','275','276','277','278','279','280','281','282','283','285','286','287','288','289','290','291') AND `type` IN ('1','2') AND `status` = 1  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','16','17','18','19','20','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','79','80','81','87','88','89','90','91','92','93','94','98','100','101','102','103','104','105','107','108','109','110','111','112','113','114','117','121','122','123','124','125','126','127','128','130','133','136','137','138','139','141','145','146','148','149','150','151','154','157','158','159','161','164','165','166','167','171','173','182','197','198','199','200','201','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','234','237','238','239','240','241','242','243','244','256','269','270','271','274','275','276','277','278','279','280','281','282','283','285','286','287','288','289','290','291') AND `type` = 2 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0007s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0011s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012016s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002309s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.010192s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017284s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004511s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005911s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.005896s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000492s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007322s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001384s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.017604s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000721s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
+
+[ 2017-06-23T11:11:55+08:00 ] 122.200.120.6 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Bidding/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 321 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 321  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 321 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='27' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','16','17','18','19','20','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','79','80','81','87','88','89','90','91','92','93','94','98','100','101','102','103','104','105','107','108','109','110','111','112','113','114','117','121','122','123','124','125','126','127','128','130','133','136','137','138','139','141','145','146','148','149','150','151','154','157','158','159','161','164','165','166','167','171','173','182','197','198','199','200','201','205','206','207','208','209','210','211','212','213','214','215','216','217','218','219','220','221','222','223','224','225','226','227','228','229','230','231','232','234','237','238','239','240','241','242','243','244','256','269','270','271','274','275','276','277','278','279','280','281','282','283','285','286','287','288','289','290','291') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '订单管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code','Bidding/recharge') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '兑换管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code','Bidding/recharge') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '开奖码管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code','Bidding/recharge') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '充值管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code','Bidding/recharge') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0007s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000386s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000267s ]
+
+[ 2017-06-23T11:11:58+08:00 ] 122.200.120.6 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0006s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000213s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000214s ]
+
+[ 2017-06-23T11:12:12+08:00 ] 122.200.120.6 /index.php?s=/Control/Config/group.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 68 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '管理员' AND `url` IN ('AuthManager/index','Model/index','Config/group','Menu/index','Category/index','Database/index?type=export','Database/index?type=import','Admin/index') AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '系统设置' AND `url` IN ('AuthManager/index','Model/index','Config/group','Menu/index','Category/index','Database/index?type=export','Database/index?type=import','Admin/index') AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '内容管理' AND `url` IN ('AuthManager/index','Model/index','Config/group','Menu/index','Category/index','Database/index?type=export','Database/index?type=import','Admin/index') AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '数据备份' AND `url` IN ('AuthManager/index','Model/index','Config/group','Menu/index','Category/index','Database/index?type=export','Database/index?type=import','Admin/index') AND `pid` = 68 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000220s ]
+
+[ 2017-06-23T11:12:14+08:00 ] 122.200.120.6 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0009s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0011s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.014256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.012961s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018408s ]
+SQL: select version() as v; [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003290s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004251s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.004270s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020397s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000465s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005563s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001326s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.018665s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000747s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000241s ]
+
+[ 2017-06-23T11:12:16+08:00 ] 122.200.120.6 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0007s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000214s ]
+
+[ 2017-06-23T11:12:22+08:00 ] 122.200.120.6 /index.php?s=/Control/Join/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Join/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `url` IN ('User/index','Sms/index','Join/index') AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: title /home/wwwroot/duobao/Ewshop/Control/Controller/JoinController.class.php 第 24 行.
+NOTIC: [8] Undefined index: status /home/wwwroot/duobao/Ewshop/Control/Controller/JoinController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `ewshop_join` [ RunTime:0.0011s ]
+SQL: SELECT j.*,u.nickname FROM ewshop_join j LEFT JOIN ewshop_member AS u ON j.uid = u.uid  WHERE j.is_delete = 0  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined variable: group /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 131 行.
+NOTIC: [8] Undefined index: status /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 235 行.
+NOTIC: [8] Undefined index: status /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 237 行.
+NOTIC: [8] Undefined index: status /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 239 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: order /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 273 行.
+NOTIC: [8] Undefined variable: hover /home/wwwroot/duobao/Runtime/Cache/Control/8ae4981ff483f18c4a3f10c022cfc3d1.php 第 791 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000246s ]
+
+[ 2017-06-23T11:13:09+08:00 ] 122.200.120.6 /index.php?s=/Control/Ad/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Ad/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 158 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 158  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 158 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '广告管理' AND `url` IN ('Ad/index','Adposition/index') AND `pid` = 158 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_ad` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_ad` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name`,`title`,`url`,`partner`,`description`,`meta_title`,`place`,`display`,`create_time`,`update_time`,`status`,`icon`,`ypid`,`px`,`ord` FROM `ewshop_ad` WHERE `status` = 1 ORDER BY px ASC ,id desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_adposition` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SHOW COLUMNS FROM `ewshop_picture` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000161s ]
+
+[ 2017-06-23T11:13:31+08:00 ] 122.200.120.6 /index.php?s=/Control/Goods/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `extend_id` FROM ewshop_admin g INNER JOIN ewshop_auth_extend c on g.groupid=c.group_id  WHERE ( g.uid='27' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Goods/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 166 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 166  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 166 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '内容管理' AND `url` IN ('goods/index','goods/recycle') AND `pid` = 166 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `extend_id` FROM ewshop_admin g INNER JOIN ewshop_auth_extend c on g.groupid=c.group_id  WHERE ( g.uid='27' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ewshop_category` WHERE `status` = 1 AND `ismenu` = 1 ORDER BY pid,sort  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ewshop_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ewshop_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 AND `model_id` > 3 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title`,`update_time`,`status`,`category_id`,`model_id`,`pid` FROM ewshop_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 AND `model_id` > 3 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT `extend` FROM `ewshop_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_attribute` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ewshop_attribute` WHERE `model_id` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: groups /home/wwwroot/duobao/Ewshop/Control/Controller/GoodsController.class.php 第 238 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2017-06-23T11:13:42+08:00 ] 122.200.120.6 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0006s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000217s ]
+
+[ 2017-06-23T11:13:54+08:00 ] 122.200.120.6 /index.php?s=/Control/Config/group.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000407s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018631s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000128s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000206s ]
+
+[ 2017-06-23T13:24:10+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2017-06-23T13:24:12+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'liuchenxi' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498195452',`last_login_ip`='2059958277' WHERE `uid` = 28 [ RunTime:0.0055s ]
+
+[ 2017-06-23T13:24:16+08:00 ] 122.200.120.5 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='28' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` IN ('1','2') AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 2 AND `status` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0006s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0009s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015764s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.015117s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019883s ]
+SQL: select version() as v; [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002796s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004076s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.004067s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000763s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005794s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001770s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.021073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001138s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-06-23T13:24:20+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Bidding/index%' ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 321 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 321  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 321 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='28' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '订单管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '兑换管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '开奖码管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '充值管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0009s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000222s ]
+
+[ 2017-06-23T13:24:20+08:00 ] 101.226.33.221 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000230s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000324s ]
+
+[ 2017-06-23T13:24:32+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/code.html
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_code` WHERE `code` <> 0 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `id`,`code`,`code_56`,`code_56_type`,`code_110`,`code_110_type`,`period`,`create_time`,`time`,`czh`,`cno`,`ctime`,`province`,`company`,`info` FROM `ewshop_win_code` WHERE `code` <> 0 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-06-23T13:24:42+08:00 ] 101.226.33.218 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2017-06-23T13:27:15+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/exchange.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 28 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_exchange` WHERE `is_virtual` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`is_virtual`,`uid`,`goods_id`,`order_id`,`exchange_number`,`buy_num`,`buy_time`,`create_time`,`is_exchange`,`exchange_time`,`city`,`remarks` FROM `ewshop_win_exchange` WHERE `is_virtual` = 0 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 412 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 414 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 409 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 407 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 404 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 402 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 402 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 398 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 400 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE ( id = 394 and status = 1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2017-06-23T13:27:25+08:00 ] 180.163.1.46 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000293s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2017-06-23T17:30:20+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000207s ]
+
+[ 2017-06-23T17:30:32+08:00 ] 122.200.120.5 /index.php?s=/Control/Config/group.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000138s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000189s ]
+
+[ 2017-06-23T17:31:41+08:00 ] 122.200.120.5 /index.php?s=/Control/Config/group/id/2.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 2 ORDER BY sort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000229s ]
+
+[ 2017-06-23T17:32:08+08:00 ] 122.200.120.5 /index.php?s=/Control/Ad/index.html
+SQL: SHOW COLUMNS FROM `ewshop_ad` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_ad` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`title`,`url`,`partner`,`description`,`meta_title`,`place`,`display`,`create_time`,`update_time`,`status`,`icon`,`ypid`,`px`,`ord` FROM `ewshop_ad` WHERE `status` = 1 ORDER BY px ASC ,id desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_adposition` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SHOW COLUMNS FROM `ewshop_picture` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2017-06-23T17:32:11+08:00 ] 122.200.120.5 /index.php?s=/Control/Ad/index.html
+SQL: SHOW COLUMNS FROM `ewshop_ad` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_ad` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`url`,`partner`,`description`,`meta_title`,`place`,`display`,`create_time`,`update_time`,`status`,`icon`,`ypid`,`px`,`ord` FROM `ewshop_ad` WHERE `status` = 1 ORDER BY px ASC ,id desc LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_adposition` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`note`,`create_time` FROM `ewshop_adposition` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000201s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SHOW COLUMNS FROM `ewshop_picture` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 419 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: pid /home/wwwroot/duobao/Runtime/Cache/Control/7a73a39e7d1f368efcf24c3a1334d3d8.php 第 191 行.
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_picture` WHERE `status` = 1 AND `id` = 628 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000231s ]
+
+[ 2017-06-23T17:38:52+08:00 ] 122.200.120.5 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0010s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000274s ]
+
+[ 2017-06-23T17:38:55+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 27 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0009s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000233s ]
+
+[ 2017-06-23T17:38:58+08:00 ] 122.200.120.5 /index.php?s=/Control/Weixin/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Weixin/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 175 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 175  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 175 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '基础配置' AND `url` IN ('Control/Weixin/index','Control/Weixin/menu','Control/Weixin/guanzhu','Control/Weixin/keywords') AND `pid` = 175 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_wxsetting` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_wxsetting` WHERE `id` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014608s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000278s ]
+
+[ 2017-06-23T17:38:59+08:00 ] 122.200.120.5 /index.php?s=/Control/Goods/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `extend_id` FROM ewshop_admin g INNER JOIN ewshop_auth_extend c on g.groupid=c.group_id  WHERE ( g.uid='27' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `extend_id` FROM ewshop_admin g INNER JOIN ewshop_auth_extend c on g.groupid=c.group_id  WHERE ( g.uid='27' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ewshop_category` WHERE `status` = 1 AND `ismenu` = 1 ORDER BY pid,sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ewshop_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ewshop_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 AND `model_id` > 3 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title`,`update_time`,`status`,`category_id`,`model_id`,`pid` FROM ewshop_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 AND `model_id` > 3 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT `extend` FROM `ewshop_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_attribute` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ewshop_attribute` WHERE `model_id` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: groups /home/wwwroot/duobao/Ewshop/Control/Controller/GoodsController.class.php 第 238 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [2] Missing argument 3 for get_list_field(), called in /home/wwwroot/duobao/Runtime/Cache/Control/4e5db11c00a2ec5717c10fd6d9b5f565.php on line 407 and defined /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 17 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 49 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 50 行.
+NOTIC: [8] Undefined variable: model /home/wwwroot/duobao/Ewshop/Control/Common/function.php 第 51 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000213s ]
+
+[ 2017-06-23T17:39:00+08:00 ] 122.200.120.5 /index.php?s=/Control/Config/group.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ewshop_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000273s ]
+
+[ 2017-06-23T17:39:01+08:00 ] 122.200.120.5 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0012s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0011s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.017917s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.015680s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021742s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003003s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.003993s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.004014s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.024226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000493s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005525s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001491s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.021336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000686s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000155s ]
+

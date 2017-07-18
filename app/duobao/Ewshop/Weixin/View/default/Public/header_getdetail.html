@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>{$meta_title} - {:C('WEB_SITE_TITLE')}</title>
+    <link rel="stylesheet" href="__CSS__/swiper.min.css">
+    <link rel="stylesheet" href="__CSS__/styles.css" />
+    <link rel="stylesheet" href="__CSS__/index.css" />
+    <script type="text/javascript" src="__JS__/swiper.min.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="__JS__/index.js"></script>
+    <script type="text/javascript">
+        M.load(function(){
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                autoplay: 5000
+            });
+        })
+    </script>
+    <style type="text/css">
+        .swiper-pagination-bullet{
+            background: #FFFFFF;
+        }
+        .swiper-pagination-bullet-active{
+            opacity: 1;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户明细</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/buyrecord.css">
+</head>
+<body>
+<div class="mainall">
+    <div class="foot">
+        <p>账户余额：{$price} </p>
+        <p><a href="{:U('Goods/detail')}/id/11?t=cuihua">充值</a></p>
+        <!--<p>当日未获奖：{$order_fail_num}单</p>-->
+    </div>
+    <ul class="buylis">
+        <volist name="list" id="vo">
+            <li style="height: 90px;">
+                <div class="li1">
+
+                </div>
+                <div class="li2">
+                    <p class="li-tit">{$vo.out_trade_no}</p>
+                    <!--<p class="">本期期数： <span class="red">{$vo.period}</span></p>-->
+                    <p>备注：<span class="red">{$vo.remark} 共  {$vo.money}</span></p>
+                    <p>时间：{$vo.create_time|date='Y/m/d H:i:s', ###}</p>
+                </div>
+                <!--<div class="qx"><a href="/Weixin/My/orderDetail/id/{$vo.id}" style="color: #5d6b7d;">查看详情</a></div>-->
+            </li>
+        </volist>
+    </ul>
+
+</div>
+
+<include file="Public/footer3" />
+<script type="text/javascript"></script>
+</body>
+</html>

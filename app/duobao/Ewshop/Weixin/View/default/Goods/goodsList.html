@@ -1,0 +1,86 @@
+<include file="Public/nav" />
+<div class="xg-xiala">
+    <div class="xg-xiala-left">
+        <select name="select_type">
+            <option value="1"
+            <eq name="data.select_type" value="1">selected</eq>
+            >价格分类</option>
+            <option value="2"
+            <eq name="data.select_type" value="2">selected</eq>
+            >商品分类</option>
+        </select>
+    </div>
+    <div class="xg-xiala-r" style="width: 80%;margin-left: 20px;">
+        <select name="range">
+            <option value="s">--请选择--</option>
+            <option value="0"
+            <eq name="data.range" value="0">selected</eq>
+            >全部</option>
+            <option value="5"
+            <eq name="data.range" value="5">selected</eq>
+            >50,001元以上</option>
+            <option value="4"
+            <eq name="data.range" value="4">selected</eq>
+            >30,001 – 50,000元</option>
+            <option value="3"
+            <eq name="data.range" value="3">selected</eq>
+            >10,001- 30,000元</option>
+            <option value="2"
+            <eq name="data.range" value="2">selected</eq>
+            >1,001 - 10,000元</option>
+            <option value="1"
+            <eq name="data.range" value="1">selected</eq>
+            >1,000元以下</option>
+        </select>
+        <select name="cate" style="display: none;">
+           <!--获得全部商品分类-->
+            <option value="s">--请选择--</option>
+            <option value="0"
+            <eq name="data.cate" value="0">selected</eq>
+            >全部</option>
+            <volist name="data.all_cate" id="vo">
+                <option value="{$vo.id}"
+                <eq name="data.cate" value="$vo.id">selected</eq>
+                >{$vo.title}</option>
+            </volist>
+        </select>
+    </div>
+</div>
+<form action="{:U('/Weixin/goods')}" method="post">
+    <input type="hidden" name="select_type" value="{$data.select_type}" />
+    <input type="hidden" name="range" value="{$data.range}" />
+    <input type="hidden" name="cate" value="{$data.cate}" />
+    <div class="search pd_20">
+        <div class="search_inp">
+            <input value="{$data.key}" type="text" name="key" />
+        </div>
+        <div class="search_btn mr_l_20">
+            <button>搜索</button>
+        </div>
+    </div>
+</form>
+<div class="content">
+    <volist name="data.goodsList" id="vo">
+        <div class="content_Box pd_20 box">
+            <div class="content_Box_img">
+                <a href="{:U('/Weixin/detail/'.$vo['id'])}"><img src="{$vo.path}" /></a>
+            </div>
+            <div class="content_text">
+                <a href="{:U('/Weixin/detail/'.$vo['id'])}">
+                    <div>{$vo.title}</div>
+                </a>
+                <!--<p class="settime"-->
+                        <!--endTime="{$vo.end_at|date='Y-m-d H:i:s',###}"-->
+                        <!--startTime="{$vo.start_at|date='Y-m-d H:i:s',###}">距结束: {$vo.end_at}-->
+                <!--</p>-->
+                <p>当前价: <span data-goodsId="{$vo.id}">￥{$vo.now_price}</span></p>
+            </div>
+        </div>
+    </volist>
+</div>
+</body>
+</html>
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Public/Weixin/js/goodsList.js"></script>
+<script type="text/javascript" src="/Public/Weixin/layer/layer.js"></script>
+<script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>

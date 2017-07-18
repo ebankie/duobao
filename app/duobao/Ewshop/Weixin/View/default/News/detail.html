@@ -1,0 +1,22 @@
+<include file="Public/header_common" />
+<body>
+<header class="header box">
+    <div class="box_icon_left" id="menuButon" onclick="history.back();">
+        <img class="box_icon_left_img" src="__IMG__/left.png" />
+    </div>
+    <div class="box_title">资讯详情</div>
+    <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+        <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png" />
+    </div>
+</header>
+<div id="main">
+    <div class="details pd_tb_20 mr_rl_20">
+        <p class="pd_t_15 pd_b_15">{$data.detail.title}</p>
+        <div class="pd_b_15">&nbsp;&nbsp;&nbsp;{$data.detail.create_time|date='Y-m-d',###}</div>
+    </div>
+    <div class="dtContent pd_20">
+        {$data.detail.content}
+    </div>
+</div>
+</body>
+</html>

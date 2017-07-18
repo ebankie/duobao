@@ -1,0 +1,134 @@
+<extend name="Public/base"/>
+
+
+
+<block name="body">
+
+	<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+
+	<div class="main-title">
+
+		<h2>{:isset($info['uid'])?'查看会员权限信息':'不存在此记录'}</h2>
+
+	</div>
+
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+
+		
+
+				<!-- 基础 -->
+
+			<form action="{:U()}" method="post" class="form-horizontal">
+				<div id="tab1" class="tab-pane in tab1">
+
+					<div class="form-item">
+						<label class="item-label">
+							姓名<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							{$info.nickname|default=''}
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							最后登录时间<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							{$info.last_login_time|date='Y-m-d H.i.s',###}
+						</div>
+					</div>
+
+					<div class="form-item">
+						<label class="item-label">
+							是否为分销商<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<label><input type="radio" name="isdis" class="text input-large" value="1" <if condition="($info.isdis eq 1)">checked="checked"</if> >是</label><br />
+							<label><input type="radio" name="isdis" class="text input-large" value="0" <if condition="($info.isdis eq 0)">checked="checked"</if>>否</label>
+						</div>
+					</div>					
+
+					
+				
+			<!--			<div class="form-item">
+						<label class="item-label">
+							公司营业执照<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="name" class="text input-large" value="{$info.name|default=''}">
+						</div>
+					</div>  -->
+					
+
+                  
+					<script type="text/javascript">
+					//上传图片
+				    /* 初始化上传插件 */
+					$("#upload_picture").uploadify({
+				        "height"          : 30,
+				        "swf"             : "__STATIC__/uploadify/uploadify.swf",
+				        "fileObjName"     : "download",
+				        "buttonText"      : "上传图片",
+				        "uploader"        : "{:U('File/uploadPicture',array('session_id'=>session_id()))}",
+				        "width"           : 120,
+				        'removeTimeout'	  : 1,
+				        'fileTypeExts'	  : '*.jpg; *.png; *.gif;',
+				        "onUploadSuccess" : uploadPicture,
+				        'onFallback' : function() {
+				            alert('未检测到兼容版本的Flash.');
+				        }
+				    });
+
+					function uploadPicture(file, data){
+				    	var data = $.parseJSON(data);
+				    	var src = '';
+				        if(data.status){
+				        	$("#cover_id").val(data.id);
+				        	src = data.url || '__ROOT__' + data.path;
+				        	$("#cover_id").parent().find('.upload-img-box').html(
+				        		'<div class="upload-pre-item"><img src="' + src + '"/></div>'
+				        	);
+				        } else {
+				        	updateAlert(data.info);
+				        	setTimeout(function(){
+				                $('#top-alert').find('button').click();
+				                $(that).removeClass('disabled').prop('disabled',false);
+				            },1500);
+				        }
+				    }
+					</script>
+
+					
+
+
+				<div class="form-item">
+
+					<input type="hidden" name="id" value="{$info.uid|default=''}">
+
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+
+				</div>
+
+				</form>
+
+		</div>
+
+	</div>
+
+</block>
+
+
+
+<block name="script">
+
+	<script type="text/javascript">
+		//导航高亮
+		highlight_subnav('{:U('Disbut/member')}');
+	</script>
+
+</block>
+

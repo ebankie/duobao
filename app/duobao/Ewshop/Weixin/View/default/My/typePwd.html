@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请输入查询密码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/password.css">
+</head>
+<body>
+<div class="mainall">
+    <form role="form" action="__SELF__" method="post" name="formUser" id="formUser">
+        <div class="set">
+            <input type="password" id="password1"    name="password" placeholder="请设置查询密码">
+        </div>
+    </form>
+    <p class="p1">忘记密码</p>
+    <div class="btn">
+        <button class="btn1" id="confirm" onclick="submitFormUser();">确认</button>
+        <button class="btn2" onclick="reset();">重置</button>
+    </div>
+</div>
+<include file="Public/footer" />
+
+<script type="text/javascript" src="__JS__/zepto.min.js"></script>
+
+
+<script>
+    function reset(){
+        $('#password1').val('');
+    }
+
+
+    function submitFormUser(){
+        $('#formUser').submit();//提交
+    }
+</script>
+</body>
+</html>

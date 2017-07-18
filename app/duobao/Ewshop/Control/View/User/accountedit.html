@@ -1,0 +1,63 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>变动会员资金</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+	<input type="hidden" class="text input-large" name="uid" value="{$user.uid}">
+        <div class="form-item">
+            <label class="item-label">用户昵称<span class="check-tips"></span></label>
+            <div class="controls">
+                {$user.nickname}
+            </div>
+        </div>    
+        <div class="form-item">
+            <label class="item-label">现有资金<span class="check-tips"></span></label>
+            <div class="controls">
+                {$user.account}
+            </div>
+        </div>
+		<div class="form-item">
+            <label class="item-label">变动资金类型<span class="check-tips"></span></label>
+            <div class="controls">
+            	<label class="radio"><input type="radio" name="status" value="2" checked>支出</label>
+				<label class="radio"><input type="radio" name="status" value="1" >收入</label>
+            </div>
+        </div> 
+		<div class="form-item">
+            <label class="item-label">充值方式<span class="check-tips"></span></label>
+            <div class="controls">
+				<label class="radio"><input type="radio" name="cometype" value="0" checked>消费</label>
+				<label class="radio"><input type="radio" name="cometype" value="1">在线充值</label>
+            </div>
+        </div>               
+
+        <div class="form-item">
+            <label class="item-label">资金数目<span class="check-tips">（需要支出或收入的金额）</span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="money" value="">
+            </div>
+        </div>
+       <div class="form-item">
+            <label class="item-label">资金流动说明<span class="check-tips"></span></label>
+            <div class="controls">
+                <label class="textarea input-large">
+                <textarea name="note"></textarea>
+                </label>
+            </div>
+        </div>	
+  
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        //导航高亮
+        highlight_subnav('{:U('User/index')}');
+    </script>
+</block>

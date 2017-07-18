@@ -1,0 +1,51 @@
+<include file="Public/header_getdetail" />
+<header class="header box">
+    <div class="box_icon_left" id="menuButon" onclick="history.back();">
+        <img class="box_icon_left_img" src="__IMG__/left.png"/>
+    </div>
+    <div class="box_title">拍卖详情</div>
+    <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+        <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png"/>
+    </div>
+</header>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <volist name="data.goodsDetail.pics" id="vo">
+            <div class="swiper-slide side_big">
+                <img src="{$vo.path}" />
+            </div>
+        </volist>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<!--标题价格-->
+<div class="pd_20 money_box">
+    <div class="text_one_b">{$data.goodsDetail.title}</div>
+    <p class="money_one">起拍价格: <span>￥{$data.goodsDetail.start_price}</span></p>
+    <p class="money_one">拍下价格: <span>￥{$data.goodsDetail.now_price}</span></p>
+</div>
+<!--出价记录-->
+<div class="record mr_top_20 mr_b_20">
+    <div class="recordTitle">
+        <p>出价记录</p>
+        <div class="pd_l_20">{$data.biddingLog|count}条</div>
+    </div>
+    <volist name="data.biddingLog" id="vo" key="k">
+        <eq name="k" value="1">
+            <div class="box_rol_3 pd_tb_20 mr_rl_20 record_select_text_color">
+                <else />
+                <eq name="k" value="$data.biddingLogCount">
+                    <div class="box_rol_3 pd_tb_20 mr_rl_20 box_rol_3_bornone">
+                        <else />
+                        <div class="box_rol_3 pd_tb_20 mr_rl_20">
+                </eq>
+        </eq>
+        <div class="name">{$vo.mobile}</div>
+        <div class="time">{$vo.create_at|date='m.d H:i:s',###}</div>
+        <div class="price">￥{$vo.price}</div>
+</div>
+</volist>
+</div>
+</body>
+</html>

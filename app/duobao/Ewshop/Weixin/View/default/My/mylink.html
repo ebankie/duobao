@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的二维码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/password.css">
+</head>
+<body>
+<div class="mainall">
+    <div class="addwx">
+        <img src="__IMG__/addewm.png" alt="" />
+    </div>
+    <div class="wx-ewm">
+        <img src="{$wurl}" alt="" />
+    </div>
+    <p class="longtap">分享此二维码给你的好友，他们购买后您坐享{$data.ratio}%奖励呦！</p>
+    <!--<div class="btn">
+        <button class="btn1" id="confirm"  style="width: 6.666rem;">联系兑奖客服</button>
+    </div>-->
+</div>
+
+<!--弹窗-->
+<!--<div class="dh-alert" style="display: none;">-->
+    <!--<div class="dh-quit">×</div>-->
+    <!--<p class="dh-1">添加客服兑奖</p>-->
+    <!--<div class="dh-con">-->
+        <!--<p class="dh-con-head">常按二维码，添加客服微信兑奖</p>-->
+        <!--<img class="dh-ewm" src="__IMG__/ewm.jpeg" alt="" />-->
+    <!--</div>-->
+
+<!--</div>-->
+
+<include file="Public/footer3" />
+
+<script type="text/javascript" src="__JS__/zepto.min.js"></script>
+<script>
+    $('#confirm').click(function(){
+        $('.dh-alert').show();
+    });
+
+    //点击弹窗消失
+    $(".dh-quit").tap(function(){
+        $(".dh-alert").hide();
+    })
+</script>
+</body>
+</html>

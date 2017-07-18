@@ -1,0 +1,79 @@
+<include file="Public/header" />
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<body>
+<header class="header">欢迎登录拍卖系统</header>
+<form class="form-horizontal" role="form" id="zzptj" action="{:U('User/register')}" method="post" name="formUser" onsubmit="return submitPwdInfo();">
+    <div class="input_box">
+        <div class="input_title">手机号/Phone</div>
+        <div class="input_inp">
+            <input type="text" name='mobile_phone' id='mobile_phone' class="input_t_r" placeholder="请输入手机号"  />
+        </div>
+    </div>
+    <div class="input_box">
+        <div class="input_title">姓名/Name</div>
+        <div class="input_inp">
+            <input type="text" name='realname' id='realname' class="input_t_r" placeholder="请输入真实姓名" />
+        </div>
+    </div>
+    <div class="input_box">
+        <div class="input_title">桌号/Table No.</div>
+        <div class="input_inp">
+            <input type="text" name='tablenum' id='tablenum' class="input_t_r" placeholder="请填写桌号或桌主姓名" />
+        </div>
+    </div>
+    <div class="input_box">
+        <div class="input_title">邮箱/Email</div>
+        <div class="input_inp">
+            <input type="text" name='email' id='email' class="input_t_r" placeholder="请填写您的邮箱" />
+        </div>
+    </div>
+    <input type="submit" class="button mr_top_30" value="提交登记" />
+</form>
+<div class="text_box mr_top_10 text_i_title">
+    <i>所有注册信息均为保密，将会严格保护用户的个人隐私，不会向任何第三方透露嘉宾的信息。
+       </i>
+</div>
+<img src="__IMG__/login-logo-mls.png" id="login_img" class="mr_top_10" />
+<script language=javascript>
+    function submitPwdInfo() {
+        var mobile_phone = $("#mobile_phone").val();
+        if (mobile_phone == '') {
+            str = '请填写手机号码';
+            $('#mobile_phone').attr('placeholder' , str);
+            $("#mobile_phone").focus().addClass('hover');
+            return false;
+        }
+		
+		var tel		=	/^\+?(\d{3})?\d{8}$/;
+		var tel_d	=	/^\+?(\d{3})?\d{11}$/;	
+        if (!tel.test(mobile_phone) && !tel_d.test(mobile_phone)) {
+            str = '这个不是个正确的手机号码';
+            $('#mobile_phone').attr('placeholder' , str);
+            $("#mobile_phone").focus().addClass('hover');
+            return false;
+        }
+        var realname = $("#realname").val();
+        if (realname == '') {
+            str = '请填写姓名';
+            $('#realname').attr('placeholder' , str);
+            $("#realname").focus().addClass('hover');
+            return false;
+        }
+        //var tablenum = $("#tablenum").val();
+       // if (tablenum == '') {
+          //  str = '请填写桌号';
+        //    $('#tablenum').attr('placeholder' , str);
+         //   $("#tablenum").focus().addClass('hover');
+        //    return false;
+       // }      
+		//var email = $("#email").val();
+       // if (email == '') {
+       //     str = '请填写邮箱';
+       //     $('#email').attr('placeholder' , str);
+       //     $("#email").focus().addClass('hover');
+       //     return false;
+      //  }
+    }
+</script>
+</body>
+</html>

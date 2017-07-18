@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#mains{
+	width: 100%;
+	height: auto;
+}
+.exercise{
+	width: 100%;
+	height: auto;
+	background: #FFFFFF;
+}
+.exercise img{
+	width: 100%;
+}
+.exercise_title{
+	color: #E15757;
+	width: auto;
+	display: block;
+	padding: .2rem 0;
+	border-bottom: 2px solid #F1F1F1;
+}
+.exercise_content{
+	color: #6B6B6B;
+	padding: .2rem 0;
+}

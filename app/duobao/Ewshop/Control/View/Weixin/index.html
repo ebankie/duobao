@@ -1,0 +1,165 @@
+<extend name="Public/base"/>
+
+
+
+<block name="body">
+
+	<div class="main-title">
+
+		<h2>微信配置</h2>
+
+	</div>
+
+	<form action="{:U()}" method="post" class="form-horizontal">
+		<div class="form-item">
+			<label class="item-label">微信公众号名称<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="name" value="{$info.name|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">URL(服务器地址)<span class="check-tips">（填写至微信平台服务器配置）</span></label>
+			<div class="controls">
+				{$info.url}
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">Token(令牌)<span class="check-tips">（可自定义设置，填写至微信平台服务器配置）</span></label>
+			<div class="controls">
+            	<input type="text" class="text input-large" name="token" value="{$info.token|default=''}">
+			</div>
+		</div>   
+		<div class="form-item">
+			<label class="item-label">AppID(应用ID)<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="appid" value="{$info.appid|default=''}">
+			</div>
+		</div>
+		<div class="form-item">
+			<label class="item-label">AppSecret(密钥)<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="appsecret" value="{$info.appsecret|default=''}">
+			</div>
+		</div>
+		
+			<div class="form-item">
+			<label class="item-label">微信支付商户号<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="mchid" value="{$info.mchid|default=''}">
+			</div>
+		</div>
+			<div class="form-item">
+			<label class="item-label">微信商户支付Key<span class="check-tips"></span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="key" value="{$info.key|default=''}">
+			</div>
+		</div>
+
+		<div class="form-item">
+			<label class="item-label">网页授权域名设置<span class="check-tips">(不带http://如：www.xxxx.com;与微信平台授权回调页面域名一致，一般情况不做修改)</span></label>
+			<div class="controls">
+				<input type="text" class="text input-large" name="authurl" value="{$info.authurl|default=''}">
+			</div>
+		</div>     
+        
+		<div class="form-item">
+
+			<input type="hidden" name="id" value="{$info.id|default=''}">
+
+			<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+
+			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+
+		</div>
+
+	</form>
+
+</block>
+
+
+
+<block name="script">
+
+<script type="text/javascript">
+
+$(function(){
+
+	//搜索功能
+
+	$("#search").click(function(){
+
+		var url = $(this).attr('url');
+
+        var query  = $('.search-form').find('input').serialize();
+
+        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+
+        query = query.replace(/^&/g,'');
+
+        if( url.indexOf('?')>0 ){
+
+            url += '&' + query;
+
+        }else{
+
+            url += '?' + query;
+
+        }
+
+		window.location.href = url;
+
+	});
+
+	//回车搜索
+
+	$(".search-input").keyup(function(e){
+
+		if(e.keyCode === 13){
+
+			$("#search").click();
+
+			return false;
+
+		}
+
+	});
+
+	//点击排序
+
+	$('.list_sort').click(function(){
+
+		var url = $(this).attr('url');
+
+		var ids = $('.ids:checked');
+
+		var param = '';
+
+		if(ids.length > 0){
+
+			var str = new Array();
+
+			ids.each(function(){
+
+				str.push($(this).val());
+
+			});
+
+			param = str.join(',');
+
+		}
+
+
+
+		if(url != undefined && url != ''){
+
+			window.location.href = url + '/ids/' + param;
+
+		}
+
+	});
+
+});
+
+</script>
+
+</block>

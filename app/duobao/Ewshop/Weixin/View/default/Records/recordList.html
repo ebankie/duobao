@@ -1,0 +1,43 @@
+<include file="Public/header_common" />
+<body>
+<header class="header box">
+    <div class="box_icon_left" id="menuButon" onclick="history.back();">
+        <img class="box_icon_left_img" src="__IMG__/left.png" />
+    </div>
+    <div class="box_title">拍卖记录</div>
+    <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+        <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png" />
+    </div>
+</header>
+<form action="{:U('/Weixin/records')}" method="post">
+    <div class="search pd_20">
+        <div class="search_inp">
+            <input value="{$data.key}" type="text" name="key" />
+        </div>
+        <div class="search_btn mr_l_20">
+            <button>搜索</button>
+        </div>
+    </div>
+</form>
+<div class="content">
+    <volist name="data.recordList" id="vo">
+        <div class="content_Box pd_20 box">
+            <div class="content_Box_img">
+                <a href="{:U('/Weixin/pricelog/'.$vo['goods_id'])}"><img src="{$vo.path}" /></a>
+            </div>
+            <div class="content_text">
+                <a href="{:U('/Weixin/pricelog/'.$vo['goods_id'])}">
+                    <div>{$vo.title}</div>
+                </a>
+                <!--<p class="settime" endTime="{$vo.end_at|date='Y-m-d H:i:s',###}" startTime="{$vo.start_at|date='Y-m-d H:i:s',###}">距结束: {$vo.end_at}</p>-->
+                <!--<p>当前价: <span data-goodsId="{$vo.goods_id}">￥{$vo.now_price}</span></p>-->
+            </div>
+        </div>
+    </volist>
+</div>
+</body>
+</html>
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Public/Weixin/js/goodsList.js"></script>
+<script type="text/javascript" src="/Public/Weixin/layer/layer.js"></script>
+<script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>

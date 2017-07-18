@@ -1,0 +1,161 @@
+<extend name="Public/base"/>
+<block name="body">
+	<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+	<div class="main-title">
+		<h2>{:isset($info['id'])?'编辑':'新增'}图文回复</h2>
+	</div>
+
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+
+			<form action="{:U()}" method="post" class="form-horizontal">
+
+				<div id="tab1" class="tab-pane in tab1">
+
+					<div class="form-item">
+						<label class="item-label">
+							回复标题<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="title" class="text input-large" value="{$info.title|default=''}">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							图片<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+                            <input type="file" id="upload_picture_thumb">
+                            <input type="hidden" name="thumb" id="thumb_thumb" value="{$info[thumb]}"/>
+                            <div class="upload-img-box">
+                            <notempty name="info[thumb]">
+                                <div class="upload-pre-item"><img src="{$info[thumb]|get_cover='path'}"/></div>
+                            </notempty>
+                            </div>                        
+								<script type="text/javascript">
+
+								//上传图片
+
+							    /* 初始化上传插件 */
+
+								$("#upload_picture_thumb").uploadify({
+
+							        "height"          : 30,
+
+							        "swf"             : "__STATIC__/uploadify/uploadify.swf",
+
+							        "fileObjName"     : "download",
+
+							        "buttonText"      : "上传图片",
+
+							        "uploader"        : "{:U('File/uploadPicture',array('session_id'=>session_id()))}",
+
+							        "width"           : 120,
+
+							        'removeTimeout'	  : 1,
+
+							        'fileTypeExts'	  : '*.jpg; *.png; *.gif;',
+
+							        "onUploadSuccess" : uploadPicturecover_id,
+
+							        'onFallback' : function() {
+
+							            alert('未检测到兼容版本的Flash.');
+
+							        }
+
+							    });
+
+								function uploadPicturecover_id(file, data){
+
+							    	var data = $.parseJSON(data);
+
+							    	var src = '';
+
+							        if(data.status){
+
+							        	$("#thumb_thumb").val(data.id);
+
+							        	src = data.url || '__ROOT__' + data.path
+
+							        	$("#thumb_thumb").parent().find('.upload-img-box').html(
+
+							        		'<div class="upload-pre-item"><img src="' + src + '"/></div>'
+
+							        	);
+
+							        } else {
+
+							        	updateAlert(data.info);
+
+							        	setTimeout(function(){
+
+							                $('#top-alert').find('button').click();
+
+							                $(that).removeClass('disabled').prop('disabled',false);
+
+							            },1500);
+
+							        }
+
+							    }
+
+								</script> 
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							简介<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+                            <label class="textarea input-large">
+                                    <textarea name="description">{$info.description}</textarea>
+                            </label>                          
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							详细介绍<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+								<label class="textarea">
+                                <textarea name="content">{$info.content}</textarea>
+                                {:hook('adminArticleEdit', array('name'=>content,'value'=>content))}
+		                        </label>                         
+						</div>
+					</div>                    
+					<div class="form-item">
+						<label class="item-label">
+							链接<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="link" class="text input-large" value="{$info.link|default=''}">
+						</div>
+					</div>               
+					<div class="form-item">
+						<label class="item-label">排序<span class="check-tips"></span></label>
+						<div class="controls">
+							<input type="text" name="listorder" class="text input-large" value="{$info.listorder|default=''}">
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="form-item">
+					<input type="hidden" name="id" value="{$info.id|default=''}">
+                    <input type="hidden" name="kid" value="{$kid}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+
+
+		</form>
+
+		</div>
+
+	</div>
+
+</block>
+
+

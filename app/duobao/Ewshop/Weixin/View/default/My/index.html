@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/center.css">
+</head>
+<body>
+<div class="mainall">
+    <div class="bg bg-center">
+    	<!--<img class="bg_img" src="__IMG__/bg3_02.png" alt="" />-->
+        <div class="tx">
+            <div class="tximg"><img src="{$data.headimgurl}" alt=""></div>
+        </div>
+        
+            <p class="tx-name">{$data.nickname}【{$usertype}】</p>
+    </div>
+    <ul class="centerlis">
+    	<li class="centerlis-1">
+    		<em></em>
+    		<p>常用功能</p>
+    	</li>
+        <a href="{:U('My/buyLog')}"><li>
+            <p class="li-img"><img src="__IMG__/c1.png" alt=""></p>
+            <p class="li-p">购买记录</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+        <a href="{:U('My/exchangeList')}"><li>
+            <p class="li-img"><img src="__IMG__/c2.png" alt=""></p>
+            <p class="li-p">兑奖记录</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+        <!--
+        <a href="{:U('My/account')}"><li>
+            <p class="li-img"><img src="__IMG__/money.jpg" alt=""></p>
+            <p class="li-p">个人账户</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+        -->
+        <a href="{:U('My/join')}" class="atop"><li>
+            <p class="li-img"><img src="__IMG__/join.jpg" alt=""></p>
+            <p class="li-p">申请加盟</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>        
+        <if condition="$isjoin eq true">
+        <a href="{:U('My/mylink')}"><li>
+            <p class="li-img"><img src="__IMG__/fenxiao.jpg" alt=""></p>
+            <p class="li-p">分销链接</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+        <a href="{:U('My/yongjinlog')}"><li>
+            <p class="li-img"><img src="__IMG__/money.jpg" alt=""></p>
+            <p class="li-p">佣金明细</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>  
+        <a href="{:U('My/fxuser')}"><li>
+            <p class="li-img"><img src="__IMG__/money.jpg" alt=""></p>
+            <p class="li-p">分销会员</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>                 
+        </if>       
+
+        <a href="{:U('Index/introduce')}" class="atop"><li>
+            <p class="li-img"><img src="__IMG__/c3.png" alt=""></p>
+            <p class="li-p">玩法介绍</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+
+
+        <a href="{:U('User/logout')}"><li>
+            <p class="li-img"><img src="__IMG__/c4.png" alt=""></p>
+            <p class="li-p">用户注销</p>
+            <p class="li-r"><img src="__IMG__/c-right_03.png" alt="" /></p>
+        </li></a>
+
+
+    </ul>
+</div>
+<include file="Public/footer3" />
+</body>
+</html>

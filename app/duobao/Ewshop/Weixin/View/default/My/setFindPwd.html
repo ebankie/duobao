@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置查询密码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/password.css">
+</head>
+<body>
+<div class="mainall">
+    <form role="form" action="__SELF__" method="post" name="formUser" id="formUser" onsubmit="return register();">
+
+        <div class="set">
+            <input type="password" id="password1"  onblur="check_password(this.value);"  name="password" placeholder="请设置查询密码">
+            <span class="check_tips error_tip" id="dpassword1" style="height: 1rem;"></span>
+
+        </div>
+        <div class="set shuru">
+            <input type="password" name="repassword" id="conform_password" onblur="check_conform_password(this.value);" placeholder="请再次输入">
+            <span class="check_tips error_tip" id="dconform_password" style="line-height: 4.3rem;"></span>
+        </div>
+        <div class="phone">{$data.mobile}</div>
+        <div class="set yzm">
+            <input type="text" name="miss" id="miss" onblur="checkphone();" placeholder="请输入验证码">
+            <span class="check_tips error_tip" id="dmiss" style="right: 2.9rem;line-height: 1.48rem;"></span>
+
+            <p class="zm"  onclick="sendphone();">
+                <span id="zmm"  name="sendma">获取验证码</span>
+                <!--<span id="djs"><i>60</i>s后重新发送</span>-->
+            </p>
+        </div>
+    </form>
+    <p class="p1">如收不到验证码请联系客服</p>
+    <!--<p class="p2">18888888888</p>-->
+    <div class="btn">
+        <button class="btn1" id="confirm" onclick="submitFormUser();">确认</button>
+        <button class="btn2" onclick="reset();">重置</button>
+    </div>
+</div>
+<include file="Public/footer" />
+
+<script type="text/javascript" src="__JS__/zepto.min.js"></script>
+
+
+<script>
+    function reset(){
+        $('#password1').val('');
+        $('#conform_password').val('');
+        $('#miss').val('');
+    }
+
+    function submitFormUser(){
+        $('#formUser').submit();//提交
+    }
+
+    var secs = 60;
+    function backcount(){
+        $(".zm").attr("onClick",'');
+        for(i=1;i<=secs;i++) {
+            window.setTimeout("update1(" + i + ")", i * 1000);
+        }
+    }
+    function update1(num) {
+        if(num == secs) {
+            $("#zmm").html('获取短信验证码');
+            $(".zm").attr("onClick",'sendphone();');
+        }else {
+            printnr = secs-num;
+            $("#zmm").html("(" + printnr +")秒后重发");
+        }
+    }
+    function err_msg(str, id) {
+        document.getElementById('d'+id).style.display = "inline-block";
+        document.getElementById('d'+id).innerHTML=str;
+    }
+
+
+    function sendphone(){
+        $.ajax({
+            type:'post', //传送的方式,get/post
+            url:'{:U("User/sendCodebyPhone")}', //发送数据的地址
+            data:{send_code:<php> if($_SESSION['send_code']){echo $_SESSION['send_code'];}else{echo '8888';}</php>},
+            dataType: "json",
+            success:function(data){
+//                err_msg(data.info, 'mobile');
+                alert(data.info);
+            }
+        })
+        backcount();
+    }
+
+    function checkphone(){
+        var miss=$("#miss").val();
+        if(miss ==''){
+            err_msg('请填写短信验证码', 'miss');
+        }else{
+            $.ajax({
+                type:'post', //传送的方式,get/post
+                url:'{:U("User/checkphone")}', //发送数据的地址
+                data:{miss:miss},
+                dataType: "json",
+                success:function(data)
+                {
+                    err_msg(data.info, 'miss');
+                }
+            })
+        }
+    }
+
+    function check_password(password){
+        if(password.length < 6 ){
+            err_msg('密码不能小于6位', 'password1');
+            return false;
+        }else{
+            err_msg('', 'password1');
+            $('#dpassword1').hide();
+        }
+        var conform_password = $('#conform_password').val();
+        if(conform_password!=''){
+            if ( conform_password != password ){
+                err_msg('两次密码不一致', 'conform_password');
+            }else{
+                err_msg('', 'password1');
+                err_msg('', 'conform_password');
+                $('#dpassword1,#dconform_password').hide();
+            }
+        }
+    }
+
+    function check_conform_password( conform_password )
+    {
+        password = $('#password1').val();
+        if ( conform_password.length < 6 ){
+            err_msg('密码不能小于6位', 'conform_password');
+            return false;
+        }
+        if ( conform_password != password ){
+            err_msg('两次密码不一致', 'conform_password');
+            return false;
+        }else{
+            err_msg('', 'password1');
+            err_msg('', 'conform_password');
+            $('#dpassword1,#dconform_password').hide();
+        }
+    }
+
+
+    function register(){
+
+        var miss=$("#miss").val();
+        if(miss ==''){
+            err_msg('请填写短信验证码', 'miss');
+            return false;
+        }
+        if($('#dmiss').html() != "") {
+            return false;
+        }
+
+        var password=$("#password1").val();
+        if(password ==''){
+            err_msg('请填写设置密码', 'password1');
+            return false;
+        }else{
+            err_msg('', 'password1');
+            $('#dpassword1').hide();
+        }
+
+        var conform_password=$("#conform_password").val();
+        if(conform_password ==''){
+            err_msg('请填写确认密码', 'conform_password');
+            return false;
+        }else{
+            err_msg('', 'conform_password');
+            $('#dconform_password').hide();
+        }
+
+        if(password!=conform_password){
+            err_msg('两次密码不一致', 'conform_password');
+            return false;
+        }else{
+            err_msg('', 'conform_password');
+            $('#dconform_password').hide();
+        }
+
+        return true;
+    }
+
+
+</script>
+</body>
+</html>

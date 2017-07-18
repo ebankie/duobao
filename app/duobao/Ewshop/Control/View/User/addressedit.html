@@ -1,0 +1,104 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>编辑收货地址</h2>
+    </div>
+    <form action="{:U()}" method="post" class="form-horizontal">
+	<input type="hidden" class="text input-large" name="id" value="{$info.id}">
+	<input type="hidden" class="text input-large" name="uid" value="{$info.uid}">
+        <div class="form-item">
+            <label class="item-label">收货人<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="realname" value="{$info.realname}">
+            </div>
+        </div>
+       <div class="form-item">
+            <label class="item-label">手机号<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="cellphone" value="{$info.cellphone}">
+            </div>
+        </div>	
+		<div class="form-item">
+            <label class="item-label">默认地址<span class="check-tips"></span></label>
+            <div class="controls">
+				<label class="radio"><input type="radio" name="status" value="1" <if condition="$info.status eq 1"> checked="checked"</if>>是</label>
+				<label class="radio"><input type="radio" name="status" value="0" <if condition="$info.status eq 0"> checked="checked"</if>>否</label>
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">城市<span class="check-tips"></span></label>
+            <input type="hidden" name="areaid"  id="areaid" value="{$info.area}">
+            <div class="controls" id="areaname">
+            {$areaname} [<a href="javascript:editaddress();">修改</a>]
+            </div>
+            <div class="controls" id="arealists" style="display:none;">
+              <select  name="areaids[]" onChange="changearea(this);" id="areaids">
+                <option value="0" selected>请选择地区</option>
+                <volist id="vo" name="arealist">
+                  <option value="{$vo.id}">{$vo.name}</option>
+                </volist>
+              </select>                
+            </div>
+        </div>	
+        <div class="form-item">
+            <label class="item-label">详细地址<span class="check-tips"></span></label>
+            <div class="controls">
+            	<input type="text" class="text input-large" name="address" value="{$info.address}">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">邮编<span class="check-tips"></span></label>
+            <div class="controls">
+            	<input type="text" class="text input-large" name="youbian" value="{$info.youbian}">
+            </div>
+        </div>        
+        <div class="form-item">
+            <button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </form>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+		function editaddress(obj){
+			$("#arealists").show();
+			$("#areaname").hide();
+		}
+		function changearea(obj){
+			var thisvalue = obj.value;
+			if(thisvalue==0 || thisvalue==''){
+				$("#areaid").val(0);
+				$(obj).nextAll().remove();	
+				$("#arealists").append('');	
+				changeprice();	
+			}
+		
+			$.ajax({
+				type:'post', //传送的方式,get/post
+				url:'{:U("Area/changearea")}', //发送数据的地址
+				data:{pid:thisvalue},
+				dataType: "json",
+				success:function(data){
+					var str = '';	
+					if(data.msg=='yes'){
+						str = str + '<select name="areaids[]" onchange="changearea(this);" ><option value="0">请选择地区</option>';
+						$.each(data.list,function(index,v){
+							str = str + '<option value="'+v.id+'">'+v.name+'</option>';
+						})	
+						str = str + '</select>';			
+					}else if(data.msg=='no'){
+						$("#areaid").val(thisvalue);
+					}
+					$(obj).nextAll().remove();	
+					$("#arealists").append(str);
+				},	
+				error:function (event, XMLHttpRequest, ajaxOptions, thrownError) {alert("表1单错误，"+XMLHttpRequest+thrownError); }
+			})
+		}		
+	
+        //导航高亮
+        highlight_subnav('{:U('User/index')}');
+    </script>
+</block>

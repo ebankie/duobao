@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/dingdan3.css">
+    <link rel="stylesheet" href="__CSS__/dingdan2.css">
+</head>
+<body>
+<div class="mainall">
+    <div class="bg">
+        <if condition="$info['goods_detail']['pics'] neq ''">
+            <img src="{$info['goods_detail']['pics'][0]['path']}"/>
+            <else />
+            <img src="{$info['goods_detail']['cover_img']}"/>
+        </if>
+        <div class="bgp">
+            <p class="bgp1">{$info.goods_detail.title}</p>
+            <p class="bgp2">本期：第{$info.period}期</p>
+        </div>
+    </div>
+    <div class="vs">
+        <div class="vsl">
+            <img src="{$info.member_info.headimgurl}" alt="">
+            <p class="red">{$info.member_info.nickname}</p>
+            <!--<p class="vsl4">{$info.create_time|date='Y/m/d H:i:s', ###}</p>-->
+            <p class="vsl3">{$info.type_val} {$info.num}单</p>
+            <eq name="info.is_open" value="1">
+                <notempty name="info.is_win">
+                    <div class="win"><img src="__IMG__/win_03.png" alt=""></div>
+                </notempty>
+            </eq>
+        </div>
+        <div class="vsm">
+            <img src="__IMG__/vs_03.png" alt="">
+            <!--<div class="vsmp">-->
+                <!--<div class="vsmp1">-->
+                    <!--<p>{$info.period}</p>期-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <notempty name="info_pk">
+            <div class="vsr">
+                <div class="vsrd">
+                    <volist name="info_pk.list" id="vo">
+                        <div>
+                            <img src="{$vo.headimgurl}" >
+                            <p class="gray">{$vo.nickname}</p>
+                        </div>
+                    </volist>
+                </div>
+                <p class="vsl3"><if condition="$info['type'] eq 1">大<else/>小</if> {$info.num}单</p>
+                <eq name="info.is_open" value="1">
+                    <empty name="info.is_win">
+                        <div class="win win2"><img src="__IMG__/win_03.png" alt=""></div>
+                    </empty>
+                </eq>
+            </div>
+        </notempty>
+
+    </div>
+    <div class="foot">
+        <p>开奖号码：<span class="red">{$info.win_code.code}</span></p>
+        <p>开奖时间：<span class="red">{$info.lottery_time}</span></p>
+        <p>开奖结果：<span class="red">{$info.win_code_val} {$info.win_code_val_type}</span> </p>
+        <div class="gz"><a href="{:U('Index/gameIntroduce')}" style="color:#8296b1;">算法规则</a></div>
+    </div>
+
+    <include file="Public/footer3" />
+
+</div>
+<script src="__JS__/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    console.log($('.vsrd>div').length);
+    var len = $(' .vsrd>div ').length;
+    if(len == 1){
+        $('.win').addClass('win_center');
+    }
+</script>
+</body>
+</html>

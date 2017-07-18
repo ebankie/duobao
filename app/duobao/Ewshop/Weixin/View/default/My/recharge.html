@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/homePage.css">
+    <link rel="stylesheet" href="__CSS__/homePage2.css">
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="alert">
+    <div class="content">
+        <!--<div class="chead">手机注册</div>-->
+
+            <div class="main">
+                <div class="tel">
+                    <input name="total_fee" type="number"   placeholder="要充值的微信币数量">
+                    <input name="lottery_time" type="hidden" value="{$data.end_time}" />
+                    <!--<img src="__IMG__/phone_03.jpg" alt="" class="phone">-->
+                    <!--<span class="check_tips error_tip" id="dmobile"></span>-->
+
+                </div>
+                <div id="confirm" onclick="topay();">
+                <!--<div id="confirm" onclick="callpay();">-->
+                    确定
+                </div>
+            </div>
+
+    </div>
+</div>
+</body>
+
+<script type="text/javascript">
+
+
+    // 调用微信JS api 支付
+    function jsApiCall(){
+        var total_fee = $('input[name=total_fee]').val();
+        if(total_fee == ''){
+            alert('操作异常');
+            return false;
+        }
+        var r = /^\+?[1-9][0-9]*$/;　　//正整数
+        if(!r.test(total_fee)){
+            alert('请输入大于1的整数');
+            return false;
+        }
+
+        $.ajax({
+            type: 'post', //传送的方式,get/post
+            url: '/Weixin/My/getJsApiParametersNo', //获取jsApiParameters
+            data: {total_fee:total_fee},
+            dataType: "json",
+            success: function (data) {
+
+                if(data.jsApiParameters){
+                    WeixinJSBridge.invoke('getBrandWCPayRequest',data.jsApiParameters,function(res){
+//                        WeixinJSBridge.log(res.err_msg);
+//                        alert(JSON.stringify({$jsApiParameters}));
+                        //alert(res.err_code+'---'+res.err_desc+'---'+res.err_msg);
+                        var out_trade_no = data.out_trade_no;
+                        if(res.err_msg.indexOf('ok')>0){
+                            //支付成功后的操作
+                            $.ajax({
+                                type: 'post', //传送的方式,get/post
+                                url: '/Weixin/My/doSthByPayment', //获取jsApiParameters
+                                data:  {out_trade_no:out_trade_no},
+                                dataType: "json",
+                                success: function (result) {
+                                    if(result.status == 1){
+                                        //自动跳转
+                                        var jump_url = '/Weixin/My/account';
+                                        window.location.href = jump_url;
+                                    }else{
+                                        alert('操纵异常');
+                                    }
+                                }
+                            })
+                        }
+                    });
+                }
+            }
+        })
+    }
+
+    function callpay(){
+        if (typeof WeixinJSBridge == "undefined"){
+            if( document.addEventListener ){
+                document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+            }else if (document.attachEvent){
+                document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+            }
+        }else{
+            jsApiCall();
+        }
+    }
+
+
+    function topay(){
+        var total_fee = $('input[name=total_fee]').val();
+        var lottery_time = $('input[name=lottery_time]').val();
+        if(total_fee == ''){
+            alert('操作异常');
+            return false;
+        }
+        var r = /^\+?[1-9][0-9]*$/;　　//正整数
+        if(!r.test(total_fee)){
+            alert('请输入大于1的整数');
+            return false;
+        }
+
+        $.ajax({
+            type: 'post', //传送的方式,get/post
+            url: '/Weixin/Request/rechargeOrderInfo',
+            data: {total_fee:total_fee,lottery_time:lottery_time},
+//            dataType: "json",
+            success: function (res) {
+                if(typeof(res) === 'string'){
+                    res = JSON.parse(res);
+                    var payInfo = JSON.parse(res.pay_info);
+                    var orderid = JSON.parse(res.orderid);
+                }
+
+                WeixinJSBridge.invoke(
+                        'getBrandWCPayRequest',{
+                            "appId" : payInfo.appId, //公众号名称，由商户传入
+                            "timeStamp": payInfo.timeStamp, //戳，自1970 年以来的秒数
+                            "nonceStr" : payInfo.nonceStr, //随机串
+                            "package" : payInfo.package,
+                            "signType" : payInfo.signType, //微信签名方式:
+                            "paySign" : payInfo.paySign  //微信签名,
+                        },function(data){
+                            //alert(data.err_desc+data.err_msg);
+                            if(data.err_msg.indexOf('ok')>0){
+                                // 此处可以使用此方式判断前端返回,微信团队郑重提示：res.err_msg 将在用户支付成功后返回ok，但并不保证它绝对可靠。
+                                alert('充值成功');
+                                var jump_url = '/Weixin/My/account';
+                                window.location.href = jump_url;
+                            }
+                        }
+                );
+            }
+        });
+
+    }
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,111 @@
+
+.buylis{
+    background-color: #f6f6f6;
+    padding: 0.2666rem 0.32rem 0 0.32rem;
+    margin-top: .933rem;
+}
+.buylis li{
+    height: 3.4rem;
+    background: rgba(255,255,255,1);
+    -webkit-box-shadow:1px 1px 1px   #eee;
+    -moz-box-shadow:1px 1px 1px   #eee;
+    box-shadow: 0 0 4px 0 #eee;
+    -webkit-border-radius:0.067rem;
+    -moz-border-radius:0.067rem;
+    border-radius:0.067rem;
+    padding: 0.24rem 0.1rem;
+    position: relative;
+    margin-bottom: 0.133rem;
+}
+.li1{
+    float: left;
+}
+.li-img{
+    height: 1.65rem;
+    width: 2.8rem;
+}
+.li-img img{
+    width: 2.8rem;
+    height: 1.65rem;
+}
+.li-p1{
+    width: 2.4rem;
+    font-size: 0.2133rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    text-align: center;
+    color: #5d6b7d;
+    overflow: hidden;
+}
+.li-p2{
+    width:1.866rem ;
+    height:0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+    margin: .4rem auto 0;
+    color: #db4252;
+    border: 1px solid #db4252;;
+    font-size: 0.3rem;
+}
+.li2{
+    float: left;
+    margin-left: 0.426rem;
+    color: #666;
+    font-size: 0.3rem;
+}
+.li2 p{
+    height:0.5066rem;
+    line-height: 0.5066rem;
+    margin-bottom: .2rem;
+}
+
+.li2 .li-tit{
+    font-size: 0.373rem;
+    color: #333;
+}
+.buylis li .red{
+    color: #db4252;
+}
+.qx{
+    color: #5d6b7d;
+    font-size:0.32rem ;
+    position: absolute;
+    right: 0.266rem;
+    top: 0.44rem;
+}
+.li-p3{
+    width: 2.4rem;
+    height: 0.666rem;
+    line-height: 0.666rem;
+    text-align: center;
+    font-size: 0.2666rem;
+    color: #fff;
+    background: rgba(219,66,82,1);
+    margin-bottom: 0.16rem;
+    -webkit-border-radius:0.0667rem;
+    -moz-border-radius:0.0667rem;
+    border-radius:0.0667rem;
+}
+.buylis .li-p4{
+    color: #787878;
+    border:1px solid #E8E8E8;
+    /*margin-top: 0.16rem;*/
+}
+.foot{
+    width: 100%;
+    height:0.933rem;
+    line-height: 0.933rem;
+    padding: 0 2%;
+    background: rgba(138,155,178,1);
+    color: #fff;
+    font-size: 0.3rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:100;
+}
+.foot p{
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+}

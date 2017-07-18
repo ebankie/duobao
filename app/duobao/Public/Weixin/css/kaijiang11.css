@@ -1,0 +1,69 @@
+.mainall{
+	margin-bottom: 0;
+}
+a{
+    color: black;
+}
+/*.list .li3 p{*/
+    /*background: rgba(24,187,163,1);*/
+/*}*/
+/*.list .li4 p{*/
+    /*background: rgba(255,211,63,1);*/
+/*}*/
+.hot{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    left: -10rem;
+}
+.wrap{
+    width: 7.21rem;
+    /*height: 100%;*/
+    background-color: #fff;
+    /*position: absolute;*/
+    top:1.173rem;
+    left: 0;
+    position: relative;
+}
+.title{
+    width: 100%;
+    height: 1.05rem;
+    line-height:1.05rem;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 0.43rem;
+    color: #5d6b7d;
+    padding-left:0.32rem;
+}
+.ulimg{
+    height:15.6rem;
+    overflow-y: scroll;
+}
+.img li{
+    margin: 0.27rem 0.29rem ;
+}
+.img img{
+    width: 4.7rem;
+
+}
+.icon{
+    width:0.67rem;
+    height: 1.2rem;
+    background-color: #db4252;
+    border-radius: 3px;
+    position: absolute;
+    left: 7.19rem;
+    top: 8.04rem;
+    text-align: center;
+}
+.icon img{
+    width: 0.32rem;
+    display: inline-block;
+}
+.qiang img{
+    width: 2.3733rem;
+    height: 1.08rem;
+}

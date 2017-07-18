@@ -1,0 +1,95 @@
+<extend name="Public/base"/>
+
+
+
+<block name="body">
+
+	<script type="text/javascript" src="__STATIC__/uploadify/jquery.uploadify.min.js"></script>
+
+	<div class="main-title">
+
+		<h2>{:isset($info['id'])?'编辑':'新增'}微信菜单</h2>
+
+	</div>
+
+	<div class="tab-wrap">
+
+		<div class="tab-content">
+
+			<form action="{:U()}" method="post" class="form-horizontal">
+
+				<div id="tab1" class="tab-pane in tab1">
+					<div class="form-item">
+						<label class="item-label">
+							上级菜单<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<select name="pid" class="normal_select">
+                                <option value="0">作为一级菜单</option>
+                                <volist name="list" id="menu">
+                                <option value="{$menu.id}" <if condition="$info['pid']==$menu['id']">selected</if>>{$menu.name}</option>
+                                </volist>
+                            </select>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							菜单名称<span class="check-tips">（名称不能为空）</span>
+						</label>
+						<div class="controls">
+							<input type="text" name="name" class="text input-large" value="{$info.name|default=''}">
+						</div>
+					</div>
+
+					<div class="form-item">
+						<label class="item-label">
+							事件类型<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<select name="type">
+                                    <option value="view" <if condition="$info['type']=='view'">selected</if> >超链接</option>
+                                    <option value="click" <if condition="$info['type']=='click'">selected</if>>点击事件</option>
+                            </select>
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							链接<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="view_url" class="text input-large" value="{$info.view_url|default=''}">
+						</div>
+					</div>
+					<div class="form-item">
+						<label class="item-label">
+							关键词<span class="check-tips"></span>
+						</label>
+						<div class="controls">
+							<input type="text" name="event_key" class="text input-large" value="{$info.event_key|default=''}">
+						</div>
+					</div>                    
+					<div class="form-item">
+						<label class="item-label">排序<span class="check-tips"></span></label>
+						<div class="controls">
+							<input type="text" name="listorder" class="text input-large" value="{$info.listorder|default=''}">
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="form-item">
+					<input type="hidden" name="id" value="{$info.id|default=''}">
+					<button type="submit" id="submit" class="btn submit-btn ajax-post" target-form="form-horizontal">确 定</button>
+					<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+				</div>
+
+
+		</form>
+
+		</div>
+
+	</div>
+
+</block>
+
+

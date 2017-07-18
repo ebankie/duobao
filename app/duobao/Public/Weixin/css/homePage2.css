@@ -1,0 +1,109 @@
+.mainall{
+    overflow: hidden;
+}
+/*手机注册*/
+.alert {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background: rgba(0,0,0,0.4);*/
+}
+.content {
+    width: 100%;
+    height: 12.133rem;
+    background: #fff;
+    position: relative;
+    left: 0;
+}
+.chead{
+    height:1.49rem;
+    line-height: 1.49rem;
+    text-align: center;
+    background: rgba(24,31,41,1);
+    font-size: 0.5rem;
+    color: #db4252;
+}
+.main{
+    height: 8.67rem;
+    width:100%;
+    padding:0 1.2667rem;
+}
+.tel,.message{
+    border-bottom: 0.03rem solid #ccc;
+    margin-top: 0.8rem;
+    position: relative;
+    margin-bottom: 0.1333rem;
+}
+
+.main input {
+    width: 7.5rem;
+    height: 1.6rem;
+    font-size: 0.4rem;
+    letter-spacing: 1px;
+    box-shadow: none;
+    border: none;
+    padding-left:1.1rem ;
+}
+.phone{
+    width: 0.4rem;
+    position: absolute;
+    left:0.2rem;
+    top:0.3rem;
+}
+.mm{
+    width:0.6rem;
+    height: 1rem;
+    position: absolute;
+    left: 0.05rem;
+    top:0.3rem;
+}
+.message{
+    margin-top: 0rem;
+}
+.yzm{
+    width:2.667rem;
+    height:0.933rem;
+    line-height: 0.933rem;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius:0.067rem;
+    -moz-border-radius:0.067rem;
+    border-radius:0.067rem;
+    background: rgba(219,66,82,1);
+    position: absolute;
+    right: 0px;
+    top:50%;
+    margin-top: -0.4665rem;
+    font-size: 0.37333rem;
+}
+#djs{
+    display: none;
+}
+#confirm{
+    width:7.5rem;
+    height:1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.45rem;
+    background: rgba(219,66,82,1);
+    color: #fff;
+    -webkit-border-radius:0.067rem;
+    -moz-border-radius:0.067rem;
+    border-radius:0.067rem;
+    margin-top: 1.33rem;
+    letter-spacing: 5px;
+}
+
+.check_tips {
+    position: absolute;
+    right: 0;
+    display: block;
+    padding: 0 0.2rem;
+    color: #444;
+    height: 1.85rem;
+    line-height: 1.68rem;
+    font-size: 0.4rem;
+    top: 0;
+}

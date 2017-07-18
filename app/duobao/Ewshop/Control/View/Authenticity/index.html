@@ -1,0 +1,150 @@
+<extend name="Public/base"/>
+
+
+
+<block name="body">
+
+	<div class="main-title">
+
+		<h2>产品SN号批量导入数据库</h2>
+
+	</div>
+
+	<div class="data-table table-striped">
+
+       
+<div class="c_right_b">
+			
+            <div class="dll_tc_box">
+<form name="form" action="{:U('index')}" method="post" id="myform"  enctype="multipart/form-data">
+        <table width="98%" border="0" align="center" style="margin-top:20px; border:1px solid #9abcde;"> 
+            <tr > 
+                <td height="28" colspan="2" background="../skins/top_bg.gif"><label>  <strong><a>产品SN号</a></strong></label></td> 
+            </tr> 
+            <tr> 
+                <td width="18%" height="50"> 要导入的数据excel表:</td> 
+                <td width="82%"><label> 
+                    <input name="inputExcel" type="file" id="file" size="50"  /> 
+                    </label> 
+                    <label> 
+                        <input name="submit" type="submit" class="t_bor_submit" id="submit" value="导入" /> 
+                    </label> 
+                </td> 
+            </tr> 
+            <tr> 
+                <td colspan="2" bgcolor="#DDF0FF">  [<span class="STYLE1">注</span>]数据导入格式说明:</td> 
+            </tr> 
+            <tr> 
+                <td colspan="2">  1、导入数据表文件必须是<strong>excel</strong>文件格式{.<span class="STYLE2">xls</span>}或者{.<span class="STYLE2">xlsx</span>}为扩展名．</td> 
+            </tr> 
+              <tr> 
+                <td colspan="2">  2、在导入前，请先下载此模板，然后对照模板整理数据，再导入即可。<a style="color:#0F3"" href="./Uploads/Snma/template.xls">点击下载模板</a> </td> 
+            </tr>
+             <tr> 
+                <td colspan="2">  3、列头顺序为：产品SN号。第一行内容不能更改。</a> </td> 
+            </tr>
+            <tr> 
+                <td colspan="2"> </td> 
+            </tr>
+        </table> 
+</form>        
+    </div>
+            
+      </div>
+
+
+	</div>
+
+</block>
+
+
+
+<block name="script">
+
+ <script type="text/javascript">
+
+        $(function() {
+
+            //搜索功能
+
+            $("#search").click(function() {
+
+                var url = $(this).attr('url');
+
+                var query = $('.search-form').find('input').serialize();
+
+                query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g, '');
+
+                query = query.replace(/^&/g, '');
+
+                if (url.indexOf('?') > 0) {
+
+                    url += '&' + query;
+
+                } else {
+
+                    url += '?' + query;
+
+                }
+
+                window.location.href = url;
+
+            });
+
+            //回车搜索
+
+            $(".search-input").keyup(function(e) {
+
+                if (e.keyCode === 13) {
+
+                    $("#search").click();
+
+                    return false;
+
+                }
+
+            });
+
+            //导航高亮
+
+            highlight_subnav('{:U('index')}');
+
+            //点击排序
+
+        	$('.list_sort').click(function(){
+
+        		var url = $(this).attr('url');
+
+        		var ids = $('.ids:checked');
+
+        		var param = '';
+
+        		if(ids.length > 0){
+
+        			var str = new Array();
+
+        			ids.each(function(){
+
+        				str.push($(this).val());
+
+        			});
+
+        			param = str.join(',');
+
+        		}
+
+
+
+        		if(url != undefined && url != ''){
+
+        			window.location.href = url + '/ids/' + param;
+
+        		}
+
+        	});
+
+        });
+
+    </script>
+
+</block>

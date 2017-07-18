@@ -1,0 +1,437 @@
+[ 2017-06-14T23:31:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:35:00' AND `period` = 91 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454500 ) ORDER BY id asc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000184s ]
+
+[ 2017-06-14T23:32:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:35:00' AND `period` = 91 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454500 ) ORDER BY id asc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2017-06-14T23:33:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:35:00' AND `period` = 91 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454500 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2017-06-14T23:34:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:35:00' AND `period` = 91 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454500 ) ORDER BY id asc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2017-06-14T23:35:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:40:00' AND `period` = 92 LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `ewshop_win_code` (`create_time`,`period`,`time`) VALUES ('2017/06/14 23:40:00','92','1497454800') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454800 ) ORDER BY id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0005s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:35:00' AND `goods_type` = 1 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:35:00' AND `goods_type` = 1 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:35:00' AND `goods_type` = 2 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:35:00' AND `goods_type` = 2 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ewshop_win_code` SET `code`='41545',`code_56`='50',`code_56_type`='2',`code_110`='76',`code_110_type`='2' WHERE `id` = 816 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:35:00' AND `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2017-06-14T23:35:01+08:00 ] 123.57.71.41 /Weixin/Auto/setOrderLogRand
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_document` WHERE ( category_id = 217 and status = 1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_hotcity` [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','24','242','3','1497454420','重庆市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','15','243','5','1497454236','太原市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','49','245','3','1497454256','合肥市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','193','246','1','1497454317','昆明市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','174','247','3','1497454433','潍坊市') [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','136','248','3','1497454363','济南市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 60 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','71','249','3','1497454364','芜湖市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 58 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','166','250','1','1497454280','银川市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','162','251','5','1497454213','金华市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','195','252','5','1497454349','苏州市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','67','253','2','1497454328','济南市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 17 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','91','254','1','1497454311','宁波市') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2017-06-14T23:36:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:40:00' AND `period` = 92 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454800 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000317s ]
+
+[ 2017-06-14T23:37:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:40:00' AND `period` = 92 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454800 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000194s ]
+
+[ 2017-06-14T23:38:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:40:00' AND `period` = 92 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454800 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000282s ]
+
+[ 2017-06-14T23:39:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:40:00' AND `period` = 92 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497454800 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2017-06-14T23:40:01+08:00 ] 123.57.71.41 /Weixin/Auto/setOrderLogRand
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_document` WHERE ( category_id = 217 and status = 1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_hotcity` [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0007s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','161','242','3','1497454788','武汉市') [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 18 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','167','243','2','1497454539','青岛市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','200','245','2','1497454526','成都市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','70','246','2','1497454720','南昌市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 61 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','134','247','2','1497454724','盐城市') [ RunTime:0.0015s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','34','248','2','1497454566','烟台市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','177','249','5','1497454541','上海市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','128','250','3','1497454524','福州市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 57 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','22','251','5','1497454630','淄博市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','36','252','3','1497454751','南京市') [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','145','253','1','1497454738','北京市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','86','254','3','1497454651','上海市') [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-06-14T23:40:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:45:00' AND `period` = 93 LIMIT 1   [ RunTime:0.0015s ]
+SQL: INSERT INTO `ewshop_win_code` (`create_time`,`period`,`time`) VALUES ('2017/06/14 23:45:00','93','1497455100') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455100 ) ORDER BY id asc  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0011s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:40:00' AND `goods_type` = 1 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:40:00' AND `goods_type` = 1 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:40:00' AND `goods_type` = 2 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:40:00' AND `goods_type` = 2 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `ewshop_win_code` SET `code`='13483',`code_56`='44',`code_56_type`='2',`code_110`='64',`code_110_type`='2' WHERE `id` = 817 [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:40:00' AND `status` = 1  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2017-06-14T23:41:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:45:00' AND `period` = 93 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455100 ) ORDER BY id asc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000238s ]
+
+[ 2017-06-14T23:42:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:45:00' AND `period` = 93 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455100 ) ORDER BY id asc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000267s ]
+
+[ 2017-06-14T23:43:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:45:00' AND `period` = 93 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455100 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+
+[ 2017-06-14T23:44:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:45:00' AND `period` = 93 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455100 ) ORDER BY id asc  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000394s ]
+
+[ 2017-06-14T23:45:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:50:00' AND `period` = 94 LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `ewshop_win_code` (`create_time`,`period`,`time`) VALUES ('2017/06/14 23:50:00','94','1497455400') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455400 ) ORDER BY id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:45:00' AND `goods_type` = 1 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:45:00' AND `goods_type` = 1 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:45:00' AND `goods_type` = 2 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:45:00' AND `goods_type` = 2 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `ewshop_win_code` SET `code`='29402',`code_56`='3',`code_56_type`='1',`code_110`='33',`code_110_type`='1' WHERE `id` = 818 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:45:00' AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000254s ]
+
+[ 2017-06-14T23:45:01+08:00 ] 123.57.71.41 /Weixin/Auto/setOrderLogRand
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_document` WHERE ( category_id = 217 and status = 1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_hotcity` [ RunTime:0.0006s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','141','242','1','1497455057','海口市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 42 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','19','243','4','1497455072','南通市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','144','245','3','1497454940','北京市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 54 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','57','246','2','1497454917','淮安市') [ RunTime:0.0018s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','27','247','3','1497454805','呼和浩特市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','178','248','3','1497454921','贵阳市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 37 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','98','249','5','1497454903','湖州市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 63 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','64','250','2','1497454900','西宁市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','80','251','4','1497454945','东莞市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','83','252','3','1497455074','成都市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','28','253','3','1497455069','常州市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','195','254','4','1497455043','广州市') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000175s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2017-06-14T23:46:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:50:00' AND `period` = 94 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455400 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000215s ]
+
+[ 2017-06-14T23:47:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:50:00' AND `period` = 94 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455400 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000160s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000213s ]
+
+[ 2017-06-14T23:48:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:50:00' AND `period` = 94 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455400 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000199s ]
+
+[ 2017-06-14T23:49:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:50:00' AND `period` = 94 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455400 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000196s ]
+
+[ 2017-06-14T23:50:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:55:00' AND `period` = 95 LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `ewshop_win_code` (`create_time`,`period`,`time`) VALUES ('2017/06/14 23:55:00','95','1497455700') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455700 ) ORDER BY id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:50:00' AND `goods_type` = 1 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:50:00' AND `goods_type` = 1 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:50:00' AND `goods_type` = 2 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:50:00' AND `goods_type` = 2 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `ewshop_win_code` SET `code`='15892',`code_56`='45',`code_56_type`='2',`code_110`='53',`code_110_type`='1' WHERE `id` = 819 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:50:00' AND `status` = 1  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000223s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000277s ]
+
+[ 2017-06-14T23:50:01+08:00 ] 123.57.71.41 /Weixin/Auto/setOrderLogRand
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_document` WHERE ( category_id = 217 and status = 1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_hotcity` [ RunTime:0.0007s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0011s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','153','242','2','1497455323','郑州市') [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','84','243','2','1497455178','济南市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','205','245','5','1497455291','兰州市') [ RunTime:0.0020s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','188','246','2','1497455388','苏州市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 56 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','9','247','1','1497455383','威海市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 15 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','109','248','4','1497455229','大连市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 26 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','126','249','1','1497455151','昆明市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','24','250','4','1497455138','金华市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','13','251','1','1497455355','合肥市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 27 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','88','252','5','1497455206','合肥市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 38 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','140','253','5','1497455333','唐山市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','76','254','2','1497455182','常州市') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000255s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2017-06-14T23:51:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:55:00' AND `period` = 95 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455700 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2017-06-14T23:52:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:55:00' AND `period` = 95 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455700 ) ORDER BY id asc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2017-06-14T23:53:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:55:00' AND `period` = 95 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455700 ) ORDER BY id asc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000239s ]
+
+[ 2017-06-14T23:54:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/14 23:55:00' AND `period` = 95 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497455700 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000200s ]
+
+[ 2017-06-14T23:55:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/15 00:00:00' AND `period` = 96 LIMIT 1   [ RunTime:0.0007s ]
+SQL: INSERT INTO `ewshop_win_code` (`create_time`,`period`,`time`) VALUES ('2017/06/15 00:00:00','96','1497456000') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497456000 ) ORDER BY id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0008s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:55:00' AND `goods_type` = 1 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:55:00' AND `goods_type` = 1 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:55:00' AND `goods_type` = 2 AND `type` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:55:00' AND `goods_type` = 2 AND `type` = 2 AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `ewshop_win_code` SET `code`='19665',`code_56`='10',`code_56_type`='1',`code_110`='86',`code_110_type`='2' WHERE `id` = 820 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_win_order` WHERE `lottery_time` = '2017/06/14 23:55:00' AND `status` = 1  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2017-06-14T23:55:01+08:00 ] 123.57.71.41 /Weixin/Auto/setOrderLogRand
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `ewshop_document` WHERE ( category_id = 217 and status = 1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_hotcity` [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_exchange` [ RunTime:0.0005s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','127','242','2','1497455546','南宁市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 65 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','49','243','1','1497455636','绵阳市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','165','245','3','1497455441','潍坊市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','125','246','3','1497455510','上海市') [ RunTime:0.0014s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 53 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','106','247','4','1497455465','金华市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','179','248','1','1497455636','东莞市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 30 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','31','249','3','1497455679','呼和浩特市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','56','250','5','1497455551','吉林市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','27','251','5','1497455583','厦门市') [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 52 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','9','252','3','1497455604','兰州市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','38','253','1','1497455539','珠海市') [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `ewshop_hotcity` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `ewshop_win_exchange` (`is_virtual`,`uid`,`goods_id`,`buy_num`,`buy_time`,`city`) VALUES ('1','129','254','1','1497455467','杭州市') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000227s ]
+
+[ 2017-06-14T23:56:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/15 00:00:00' AND `period` = 96 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497456000 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000166s ]
+
+[ 2017-06-14T23:57:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/15 00:00:00' AND `period` = 96 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497456000 ) ORDER BY id asc  [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000214s ]
+
+[ 2017-06-14T23:58:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/15 00:00:00' AND `period` = 96 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497456000 ) ORDER BY id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2017-06-14T23:59:01+08:00 ] 123.57.71.41 /Weixin/Auto/doAuto
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE `create_time` = '2017/06/15 00:00:00' AND `period` = 96 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_win_code` WHERE ( code = 0 and time < 1497456000 ) ORDER BY id asc  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000317s ]
+

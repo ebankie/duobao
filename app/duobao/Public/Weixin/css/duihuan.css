@@ -1,0 +1,105 @@
+.mainall{
+    background: rgba(248,249,253,1);
+}
+.tabtitle {
+    display: block;
+    width: 100%;
+    height: 1.16rem;
+    padding: 0 0.32rem;
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+.tabtitle .active {
+    color: #db4352;
+    border-bottom: 2px solid #db4352;
+}
+.tabtitle p {
+    color: #5d6b7d;
+    font-size: 0.45rem;
+    width: 50%;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    text-align: center;
+    float: left;
+}
+.tabuls{
+    width: 100%;
+    margin-top: 1.16rem;
+}
+.tabuls ul{
+    background: rgba(248,249,253,1);
+    padding: 0.2666rem 0.32rem 0 0.32rem;
+}
+.tabuls ul{
+    display: none;
+}
+.tabuls ul:nth-child(1){
+    display: block;
+}
+.tabuls li{
+    height: 3.4rem;
+    background: rgba(255,255,255,1);
+    -webkit-box-shadow:1px 1px 1px   #eee;
+    -moz-box-shadow:1px 1px 1px   #eee;
+    box-shadow: 0 0 4px 0 #eee;
+    -webkit-border-radius:0.067rem;
+    -moz-border-radius:0.067rem;
+    border-radius:0.067rem;
+    padding: 0.24rem 0.1rem;
+    position: relative;
+    margin-bottom: 0.133rem;
+}
+.li1{
+    float: left;
+}
+.li-img{
+    height: 1.7rem;
+    width: 2.4rem;
+}
+.li-img img{
+    width: 2.8rem;
+    height: 1.65rem;
+}
+.li-p1{
+    width: 2.4rem;
+    font-size: 0.3rem;
+    height: 0.56rem;
+    line-height: 0.56rem;
+    text-align: center;
+    color: #5d6b7d;
+    overflow: hidden;
+    margin-top: 0.2667rem;
+}
+.li2{
+    float: left;
+    margin-left: 0.426rem;
+    color: #666;
+    font-size: 0.3rem;
+}
+.li2 p{
+    height:0.5066rem;
+    line-height: 0.5066rem;
+    margin-bottom: 0.2rem;
+}
+
+.li2 .li-tit{
+    font-size: 0.38rem;
+    color: #333;
+}
+.buylis li .red{
+    color: #db4252;
+}
+.qx{
+  
+    position: absolute;
+    right: 0.266rem;
+    top: 0;
+}
+.qx a{
+	  color: #5d6b7d;
+    font-size:0.32rem ;
+}

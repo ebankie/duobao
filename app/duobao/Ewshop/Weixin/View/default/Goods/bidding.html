@@ -1,0 +1,167 @@
+<include file="Public/nav" />
+<link rel="stylesheet" href="/Public/Weixin/css/bidding.css" />
+<link rel="stylesheet" href="/Public/Weixin/css/font/iconfont.css" />
+<div style="display:none;">
+    <span id="user_id">{$_SESSION['onethink_home']['user_auth']['uid']}</span>
+    <span id="goods_id">{$Think.get.id}</span>
+    <span id="is_end">{$data.isEnd}</span>
+</div>
+<div class="mr_b_80">
+    <div class="swiper-container">      <!--轮播图区域-->
+        <div class="swiper-wrapper">
+            <volist name="data.goodsDetail.pics" id="vo">
+                <div class="swiper-slide side_big">
+                    <img src="{$vo.path}" />
+                </div>
+            </volist>
+        </div>
+        <div class="swiper-pagination"></div>   <!-- Add Pagination -->
+        <eq name="data.isEnd" value="1">
+            <div class="timeTime pd_lr_20 pd_b_15 pd_t_15 timeTimeOver">
+                <div class="icon_round_box pd_r_10">
+                    <img src="__IMG__/over.png" class="icon_round" />
+                </div>
+                <notempty name="data.getUser.mobile">
+                    <!--<p class="end"-->
+                            <!--endTime="{$data.goodsDetail.end_at|date='Y-m-d H:i:s',###}"-->
+                            <!--startTime="{$data.goodsDetail.start_at|date='Y-m-d H:i:s',###}">-->
+                        <!--<span>已结束: 拍品已成交</span></p>-->
+                    <else />
+                    <!--<p class="end"-->
+                            <!--endTime="{$data.goodsDetail.end_at|date='Y-m-d H:i:s',###}"-->
+                            <!--startTime="{$data.goodsDetail.start_at|date='Y-m-d H:i:s',###}">-->
+                        <!--<span>已结束</span></p>-->
+                </notempty>
+            </div>
+            <else />
+            <div class="timeTime pd_lr_20 pd_b_15 pd_t_15">
+                <div class="icon_round_box pd_r_10">
+                    <img src="__IMG__/time.png" class="icon_round" />
+                </div>
+                <!--<p class="end"-->
+                        <!--endTime="{$data.goodsDetail.end_at|date='Y-m-d H:i:s',###}"-->
+                        <!--startTime="{$data.goodsDetail.start_at|date='Y-m-d H:i:s',###}">距结束: 1天7小时12分47秒-->
+                <!--</p>-->
+            </div>
+        </eq>
+    </div>
+    <div class="pd_20 money_box">   <!--标题价格-->
+        <div class="text_one_b">{$data.goodsDetail.title}</div>
+        <eq name="data.isEnd" value="1">
+            <p class="money_one">起拍价格: <span class="color">￥{$data.goodsDetail.start_price}</span></p>
+            <notempty name="data.getUser.mobile">
+                <p class="money_one" id="nowPrice">成交价格: <span class="color">￥{$data.goodsDetail.now_price}</span></p>
+                <else />
+                <p class="money_one" id="nowPrice">当前价格: <span class="color">￥{$data.goodsDetail.now_price}</span></p>
+            </notempty>
+            <else />
+            <p class="money_one">起拍价格: <span>￥{$data.goodsDetail.start_price}</span></p>
+            <p class="money_one" id="nowPrice">当前价格: <span>￥{$data.goodsDetail.now_price}</span></p>
+        </eq>
+    </div>
+    <notempty name="data.getUser.mobile">
+        <div class="pd_20 winner mr_top_20">
+            <p>拍品获得者</p>
+            <div>{$data.getUser.mobile}</div>
+        </div>
+    </notempty>
+    <div class="record mr_top_20">
+        <div class="recordTitle">
+            <p>出价记录</p>
+            <div class="pd_l_20">{$data.biddingLogCount}条</div>
+        </div>
+        <volist name="data.biddingLog" id="vo" key="k">
+            <eq name="k" value="1">
+                <div class="box_rol_3 pd_tb_20 mr_rl_20 record_select_text_color">
+                    <else />
+                    <eq name="k" value="$data.biddingLogCount">
+                        <div class="box_rol_3 pd_tb_20 mr_rl_20 box_rol_3_bornone">
+                            <else />
+                            <div class="box_rol_3 pd_tb_20 mr_rl_20">
+                    </eq>
+            </eq>
+            <div class="name">{$vo.mobile}</div>
+            <div class="time">{$vo.create_at|date='m.d H:i:s',###}</div>
+            <div class="price">￥{$vo.price}</div>
+    </div>
+    </volist>
+</div>
+</div>
+<a id="doLike" data-goodsid="{$data.goodsDetail.id}" href="javascript:void(0);">
+    <div class="like_box">
+        <p>点击</p>
+        <p>收藏</p>
+    </div>
+</a>
+<div id="over" style="display: none;">  <!--弹出层-->
+    <div id="overBox">
+
+        <p>尊敬的<span id="ouser_name">XXX</span>：</p>
+        <p style="text-indent: 30px;">恭喜您以<span id="oprice">XXX</span>元竞拍成功<span id="oname">XXX</span>，请您至签到台进行付款和咨询。</p>
+        <div id="overBtn" class="mr_top_20">
+            <button onclick="location.href = '/Weixin/orders'">查看拍品</button>
+            <button class="btn" onclick="location.href = '/Weixin/goods'">继续拍卖</button>
+        </div>
+    </div>
+</div>
+<neq name="data.isEnd" value="1">
+    <div class="chujia pd_lr_20">
+        <div class="title">额度:</div>
+        <div class="input" id="chujia">
+            <input type="hidden" name="my_price" id="xg-jiage" />
+            <button class="iconfont">&#xe61c;</button>
+            <span>0</span>
+            <button class="iconfont">&#xe60a;</button>
+        </div>
+        <div class="cj_button" id="c" data-c="1">我要出价</div>
+        <script>
+            var box = document.getElementById("chujia");
+            var span = box.getElementsByTagName("span")[0];
+            var btns = box.getElementsByTagName("button");
+            var xgPrice = document.getElementById("xg-jiage");
+            var chujia = document.getElementById("c");
+            var price = parseInt(span.innerHTML);
+            btns[1].onclick = function () {
+                price += 1000;
+                span.innerHTML = price;
+                xgPrice.value  = price;
+                chujia.setAttribute("data-c" , "0");
+            }
+            btns[0].onclick = function () {
+                if (price <= 0) {
+                    chujia.setAttribute("data-c" , "1");
+                    return false;
+                }
+                price -= 1000;
+                if (price <= 0) {
+                    chujia.setAttribute("data-c" , "1");
+                }
+                span.innerHTML = price;
+                xgPrice.value  = price;
+            }
+        </script>
+    </div>
+</neq>
+</body>
+</html>
+
+<script type="text/javascript" src="/Public/Weixin/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/Public/Weixin/js/bidding.js"></script>
+<script type="text/javascript" src="/Public/Weixin/layer/layer.js"></script>
+<script src='http://cdn.bootcss.com/socket.io/1.3.7/socket.io.js'></script>
+<script>
+    $('#doLike').click(function () {
+        var goodsId = $(this).data('goodsid');
+        $.post("/Weixin/doLike" , {goods_id : goodsId} , function (data) {
+            if (data == 1) {
+                layer.open({content : '收藏成功' , btn : ['确定']});
+            } else if (data == 2) {
+                layer.open({content : '已收藏过' , btn : ['确定']});
+            } else if (data == 3) {
+                layer.open({content : '您没有登录' , btn : ['确定']});
+            } else {
+                layer.open({content : '收藏失败' , btn : ['确定']});
+            }
+        });
+    });
+</script>

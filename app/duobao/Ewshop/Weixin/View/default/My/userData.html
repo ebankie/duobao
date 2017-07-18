@@ -1,0 +1,34 @@
+<include file="Public/header_common" />
+<body>
+<header class="header box">
+    <div class="box_icon_left" id="menuButon" onclick="location.href = '/Weixin/my'">
+        <img class="box_icon_left_img" src="__IMG__/left.png" />
+    </div>
+    <div class="box_title">个人资料</div>
+   <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+        <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png" />
+    </div>
+</header>
+<form role="form" method="post" action="{:U('/Weixin/doedit')}">
+    <div class="input_box">
+        <div class="input_title">手机号</div>
+        <div class="input_inp">
+            <input value="{$data.userDetail.detail.username}" name="username" type="text" class="input_t_r" placeholder="请输入手机号" maxlength="11" />
+        </div>
+    </div>
+    <div class="input_box">
+        <div class="input_title">姓名</div>
+        <div class="input_inp">
+            <input value="{$data.userDetail.detail.realname}" name="realname" type="text" class="input_t_r" placeholder="请输入真实姓名" />
+        </div>
+    </div>
+    <div class="input_box">
+        <div class="input_title">邮箱</div>
+        <div class="input_inp">
+            <input value="{$data.userDetail.detail.email}" name="email" type="text" class="input_t_r" placeholder="请填写您的邮箱" />
+        </div>
+    </div>
+    <input type="submit" class="button mr_top_30" value="修改资料" />
+</form>
+</body>
+</html>

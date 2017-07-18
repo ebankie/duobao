@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="__CSS__/common.css">
+    <link rel="stylesheet" href="__CSS__/chanpin.css">
+    <link rel="stylesheet" href="__CSS__/chanpinbuy.css">
+    <link rel="stylesheet" href="__CSS__/dingdan.css">
+    <link rel="stylesheet" href="__CSS__/dingdan2.css">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+</head>
+<body>
+
+<div class="mainall">
+    <div class="bg">
+        <if condition="$data['goodsDetail']['pics'] neq ''">
+            <img src="{$data['goodsDetail']['pics'][0]['path']}"/>
+            <else />
+            <img src="{$data['goodsDetail']['cover_img']}"/>
+        </if>
+        <div class="bgp">
+            <p class="bgp1">{$data.goodsDetail.title}</p>
+            <p class="bgp2">上期：{$data.period_last_type}</p>
+            <p class="bgp3 fnTimeCountDown" data-end="{$data.time_end}">
+                开战倒计时： <span class="hour">00</span>:<span class="mini">00</span>:<span class="sec">00</span>
+                <!--:<span class="hm">000</span>-->
+
+            </p>
+            <p class="fnTimeCountDown1" data-end="{$data.time_end}" style="display: none">
+                开战倒计时： <span class="mini">00</span>:<span class="sec">00</span>
+                :<span class="hm">000</span>
+            </p>
+        </div>
+    </div>
+
+    <!--支付后-->
+    <div class="vs">
+        <div class="vsl">
+            <img src="{$data.memberData.headimgurl}" alt="">
+            <p class="red">{$data.memberData.nickname}</p>
+            <p class="vsl3">{$data.order_detail.type_val} {$data.order_detail.num}单</p>
+        </div>
+        <div class="vsm">
+            <img src="__IMG__/vs_03.png" alt="">
+            <!--<div class="vsmp">-->
+            <!--<div class="vsmp1">-->
+            <!--<p>{$data.period_now}</p>期-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+
+        <div class="vsr">
+            <div class="vsrd">
+                <volist name="data.info_pk.list" id="vo">
+                    <div>
+                        <img src="{$vo.headimgurl}" alt="">
+                        <p class="gray">{$vo.nickname}</p>
+                    </div>
+                </volist>
+            </div>
+            <p class="vsl3">{$data.info_pk.type_val} {$data.order_detail.num}单</p>
+        </div>
+
+    </div>
+<!--
+    <div class="descr">恭喜您已成功购买【{$data.goodsDetail.title}】。请耐心等待开奖结果。<span id="time">10</span> 秒之后自动跳转至个人中心-购买记录。</div>
+-->
+    <div class="buy">
+        <a href="/Weixin/Goods/detail/id/{$data.order_detail.goods_id}"> <button style="color: #fff;">继续购买</button></a>
+    </div>
+    <div class="buy">
+        <a href="/Weixin/My/buyLog"> <button style="color: #fff;">查看购买记录</button></a>
+    </div>
+
+</div>
+<include file="Public/footer" />
+
+<script type="text/javascript" src="__JS__/zepto.min.js"></script>
+
+<script type="text/javascript">
+//    $(function(){
+//        var djs=document.getElementById("time");
+//        var i=10;
+//        var timer1=null;
+//        timer1=setInterval(function(){
+//           i--;
+//            if(i<=0){
+//                clearInterval(timer1);
+//                i=0;
+//                window.location.href="{:U('My/buyLog')}";
+//            }
+//            djs.innerHTML=i;
+//        },1000);
+//    })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<include file="Public/header" />
+<div id="mains">
+    <header class="header box">
+        <div class="box_icon" id="menuButon">
+            <img class="box_icon_img" src="__IMG__/icon_menu_.png" />
+        </div>
+        <div class="box_title">活动说明</div>
+        <div class="box_icon_bg" onclick="location.href = '/Weixin'">
+            <img class="box_icon_img_bg" src="__IMG__/logo_icon_white.png" />
+        </div>
+    </header>
+    <div class="exercise">
+        <volist name="data.articleList" id="vo">
+            <img src="{$vo.path}" />
+            <div class="exercise_title mr_l_20 mr_r_20">{$vo.title}</div>
+            <div class="exercise_content mr_r_20 mr_l_20 ">
+                {$vo.content}
+            </div>
+        </volist>
+    </div>
+</div>
+</body>
+</html>

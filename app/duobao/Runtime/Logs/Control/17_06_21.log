@@ -1,0 +1,1733 @@
+[ 2017-06-21T09:59:19+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000208s ]
+
+[ 2017-06-21T09:59:21+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'linjunying1' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498010361',`last_login_ip`='2059958277' WHERE `uid` = 33 [ RunTime:0.0004s ]
+
+[ 2017-06-21T09:59:21+08:00 ] 122.200.120.5 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='33' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` IN ('1','2') AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 2 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0008s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0009s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.010986s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016159s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003048s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000017s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.004548s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.004576s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.019429s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000695s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006965s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.002388s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.018043s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000897s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000242s ]
+
+[ 2017-06-21T09:59:24+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0011s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Bidding/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 321 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 321  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 321 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='33' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '订单管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '兑换管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '开奖码管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '充值管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0011s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0009s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000160s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000264s ]
+
+[ 2017-06-21T10:15:47+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0007s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2017-06-21T10:15:55+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/code.html
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_code` WHERE `code` <> 0 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `id`,`code`,`code_56`,`code_56_type`,`code_110`,`code_110_type`,`period`,`create_time`,`time`,`czh`,`cno`,`ctime`,`province`,`company`,`info` FROM `ewshop_win_code` WHERE `code` <> 0 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000174s ]
+
+[ 2017-06-21T11:38:36+08:00 ] 101.226.89.122 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2017-06-21T14:23:42+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0012s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0011s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0008s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000165s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000232s ]
+
+[ 2017-06-21T14:23:43+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0015s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000272s ]
+
+[ 2017-06-21T14:24:56+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0010s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0014s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023390s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000150s ]
+
+[ 2017-06-21T14:28:24+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000218s ]
+
+[ 2017-06-21T14:28:28+08:00 ] 122.200.120.5 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'liuchenxi' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498026508',`last_login_ip`='2059958277' WHERE `uid` = 28 [ RunTime:0.0003s ]
+
+[ 2017-06-21T14:28:29+08:00 ] 122.200.120.5 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0011s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='28' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0009s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` IN ('1','2') AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 2 AND `status` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0006s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0009s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012463s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.011942s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018345s ]
+SQL: select version() as v; [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004924s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000029s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006505s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.006621s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000910s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009055s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.002376s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.021073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001221s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.009263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000202s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000293s ]
+
+[ 2017-06-21T14:28:32+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Bidding/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 321 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 321  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 321 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `rules` FROM ewshop_admin a INNER JOIN ewshop_auth_group g on a.groupid=g.id  WHERE ( a.uid='28' and g.status='1' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `ewshop_auth_rule` WHERE `id` IN ('14','15','110','165','171','234','276','278','281','282','283','285','286','287','288') AND `type` = 1 AND `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '订单管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '兑换管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '开奖码管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '充值管理' AND `url` IN ('Bidding/index','Bidding/exchange','Bidding/code') AND `pid` = 321 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000215s ]
+
+[ 2017-06-21T14:28:37+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0014s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0010s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 245 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000223s ]
+
+[ 2017-06-21T14:30:10+08:00 ] 101.226.33.216 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004212s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000213s ]
+
+[ 2017-06-21T18:12:56+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/code.html
+SQL: SHOW COLUMNS FROM `ewshop_win_code` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_code` WHERE `code` <> 0 LIMIT 1   [ RunTime:0.0017s ]
+SQL: SELECT `id`,`code`,`code_56`,`code_56_type`,`code_110`,`code_110_type`,`period`,`create_time`,`time`,`czh`,`cno`,`ctime`,`province`,`company`,`info` FROM `ewshop_win_code` WHERE `code` <> 0 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024178s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000239s ]
+
+[ 2017-06-21T18:13:07+08:00 ] 101.226.99.195 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000200s ]
+
+[ 2017-06-21T18:15:47+08:00 ] 122.200.120.5 /index.php?s=/Control/Bidding/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0012s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 28 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_win_order` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_win_order` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`status`,`uid`,`goods_id`,`goods_type`,`order_number`,`period`,`lottery_time`,`num`,`number_section`,`type`,`money_w`,`money`,`create_time`,`ip_info`,`pid`,`money_p`,`paytype`,`pay_time` FROM `ewshop_win_order` WHERE `status` = 1 ORDER BY create_time desc LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0008s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0018s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 248 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='557' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 243 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `title` FROM `ewshop_document` WHERE `id` = 249 LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined variable: ratio /home/wwwroot/duobao/Ewshop/Control/Controller/BiddingController.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000180s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2017-06-21T18:15:59+08:00 ] 140.207.185.109 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2017-06-21T18:47:24+08:00 ] 1.202.46.254 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003985s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2017-06-21T18:47:29+08:00 ] 1.202.46.254 /index.php?s=/Control/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/ThinkPHP/Common/functions.php 第 563 行.
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ewshop_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant UC_AUTH_KEY - assumed 'UC_AUTH_KEY' /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 96 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+NOTIC: [8] Undefined variable: uid /home/wwwroot/duobao/Ewshop/Control/Model/AdminModel.class.php 第 98 行.
+SQL: UPDATE `ewshop_admin` SET `login`=`login`+1,`last_login_time`='1498042049',`last_login_ip`='30027518' WHERE `uid` = 1 [ RunTime:0.0003s ]
+
+[ 2017-06-21T18:47:29+08:00 ] 1.202.46.254 /index.php?s=/Control/Index/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_config` [ RunTime:0.0006s ]
+SQL: UPDATE `ewshop_config` SET `value`='http://duobao.akng.net' WHERE ( name='DOMAIN' ) [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ewshop_addons` [ RunTime:0.0012s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_action_log` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_document` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_category` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ewshop_model` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.013501s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.011789s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.018157s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003839s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.001477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.005197s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.005245s ]
+SQL: SELECT `config` FROM `ewshop_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.021313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000638s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007199s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.001912s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.019081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000868s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.007385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000221s ]
+
+[ 2017-06-21T18:47:31+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_menu` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`title`,`url` FROM `ewshop_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ewshop_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ewshop_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ewshop_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ewshop_menu` WHERE `pid` = 16 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '信息管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ewshop_menu` WHERE `group` = '加盟管理' AND `pid` = 16 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0011s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2017-06-21T18:47:35+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0012s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000227s ]
+
+[ 2017-06-21T18:47:40+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0006s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2017-06-21T18:47:49+08:00 ] 1.202.46.254 /index.php?s=/Control/User/fenxianguser/puid/677.html
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `parent_id` = 677 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `parent_id` = 677 ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/duobao/Ewshop/Control/Controller/UserController.class.php 第 56 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000303s ]
+
+[ 2017-06-21T18:47:50+08:00 ] 14.215.176.5 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2017-06-21T18:47:51+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0009s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0010s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000211s ]
+
+[ 2017-06-21T18:47:54+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index/p/5.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 80,20   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0007s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='565' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='565' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='564' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='563' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='563' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='562' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='562' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='561' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='561' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='560' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='560' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='558' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='558' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='555' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000329s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000606s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000282s ]
+
+[ 2017-06-21T18:47:57+08:00 ] 1.202.46.254 /index.php?s=/Control/User/fenxianguser/puid/555.html
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `parent_id` = 555 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `parent_id` = 555 ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0006s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000308s ]
+
+[ 2017-06-21T18:48:35+08:00 ] 1.202.46.254 /index.php?s=/Control/User/fenyonglog/puid/555.html
+SQL: SHOW COLUMNS FROM `ewshop_account_log` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_account_log` WHERE `pid` = 555 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`out_trade_no`,`uid`,`pid`,`money_p`,`create_time`,`status`,`ratio` FROM `ewshop_account_log` WHERE `pid` = 555 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0005s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `nickname` FROM `ewshop_member` WHERE ( uid='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT SUM(money_p) AS tp_Sum FROM `ewshop_account_log` WHERE ( pid='555' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000268s ]
+
+[ 2017-06-21T18:52:30+08:00 ] 111.206.36.135 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2017-06-21T18:52:51+08:00 ] 111.206.36.19 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002572s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2017-06-21T18:53:00+08:00 ] 180.97.35.149 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2017-06-21T19:08:58+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0005s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000201s ]
+
+[ 2017-06-21T19:09:02+08:00 ] 1.202.46.254 /index.php?s=/Control/User/index/p/5.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 80,20   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0005s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='565' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='565' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='564' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='564' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='563' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='563' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='562' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='562' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='561' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='561' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='560' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='560' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='558' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='558' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='557' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='555' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='555' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2017-06-21T19:09:04+08:00 ] 1.202.46.254 /index.php?s=/Control/User/fenxianguser/puid/555.html
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `parent_id` = 555 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `parent_id` = 555 ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0005s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2017-06-21T19:09:12+08:00 ] 1.202.46.254 /index.php?s=/Control/User/fenxianguser/puid/555.html
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `parent_id` = 555 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `parent_id` = 555 ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0005s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='559' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='556' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000161s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000212s ]
+
+[ 2017-06-21T21:50:08+08:00 ] 111.206.36.132 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2017-06-21T21:52:31+08:00 ] 115.239.212.135 /index.php?s=/Control/Public/login.html
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2017-06-21T22:17:38+08:00 ] 223.20.184.178 /index.php?s=/Control/User/index.html
+SQL: SHOW COLUMNS FROM `ewshop_admin` [ RunTime:0.0010s ]
+SQL: SELECT `groupid` FROM `ewshop_admin` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ewshop_ucenter_member` [ RunTime:0.0008s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='677' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='676' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='675' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='674' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='673' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='667' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='663' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='662' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='661' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='660' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='659' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='658' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='655' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='654' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='652' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='650' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='647' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='646' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='635' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `mobile` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `email` FROM `ewshop_ucenter_member` WHERE ( id='633' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2017-06-21T22:17:41+08:00 ] 223.20.184.178 /index.php?s=/Control/User/fenxianguser/puid/677.html
+SQL: SHOW COLUMNS FROM `ewshop_member` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ewshop_member` WHERE `parent_id` = 677 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `uid`,`openid`,`find_code`,`nickname`,`headimgurl`,`account`,`paykey`,`sex`,`birthday`,`realname`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status`,`parent_id`,`ewm` FROM `ewshop_member` WHERE `parent_id` = 677 ORDER BY uid desc LIMIT 0,20   [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/duobao/Ewshop/Control/Controller/UserController.class.php 第 56 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000205s ]
+

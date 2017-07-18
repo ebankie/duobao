@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>分销会员</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="__CSS__/common.css">
+
+    <link rel="stylesheet" href="__CSS__/buyrecord.css">
+    
+    <link rel="stylesheet" type="text/css" href="__CSS__/swiper.min.css"/>
+    <link rel="stylesheet" href="__CSS__/homePage.css">    
+
+</head>
+
+<body>
+<div class="mainall">
+    <div class="foot">
+        【{$username}】共发展{$nums}个会员 &nbsp;&nbsp;&nbsp;&nbsp; 总收益：{$zong} 元 &nbsp;&nbsp;&nbsp;&nbsp; 今日收益：{$tdzong} 元
+    </div>
+</div>
+<div class="tab-con">
+    <ul class="lis">
+        <volist name="list" id="vo">
+            <li>
+                <div class="lf">
+                    <img src="{$vo.headimgurl}" alt="">
+                </div>
+                <div class="lm">
+                    <div class="lm-head">
+                        <p class="lmh" style="text-overflow: ellipsis;width: 3.8rem;">{$vo.nickname}</p>
+                        <p class="lmt"  style="font-size:10px">手机:{$vo.mobile}</p>
+                    </div>
+                    <div class="lm-head">
+                        <p class="lmh" style="text-overflow: ellipsis;width: 4.8rem;font-size:9px">总收益:{$vo.zong}元&nbsp;&nbsp;今日收益:{$vo.tdzong}元</p>
+                        <p class="lmt"><a href="{:U('My/fxuser?uid='.$vo['uid'])}" style="color:#C30">下级会员</a></p>
+                    </div>                    
+                    <!--<p class="lm-gwk">注册时间：{$vo.reg_time|date='Y/m/d H:i:s', ###}&nbsp;&nbsp;&nbsp;&nbsp;</p>-->
+                   
+                </div>
+            </li>
+        </volist>
+    </ul>  
+</div> 
+
+
+<include file="Public/footer3" />
+
+<script type="text/javascript"></script>
+
+</body>
+
+</html>
